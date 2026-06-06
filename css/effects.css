@@ -44,11 +44,11 @@
     top: 0;
     left: 0;
     height: 3px;
-    background: linear-gradient(90deg, var(--color-accent), var(--color-gold));
+    background: linear-gradient(90deg, var(--color-accent), var(--color-accent-light), var(--color-gold));
     z-index: 10000;
     transition: width 0.1s linear;
     border-radius: 0 2px 2px 0;
-    box-shadow: 0 0 10px rgba(0, 119, 204, 0.5);
+    box-shadow: 0 0 12px rgba(0, 119, 204, 0.6), 0 0 24px rgba(0, 119, 204, 0.2);
 }
 
 /* --- Text Reveal Animation --- */
@@ -109,7 +109,7 @@
 
 /* --- Hero gradient animation --- */
 .hero-overlay {
-    animation: heroGradient 8s ease-in-out infinite alternate;
+    animation: heroGradient 10s ease-in-out infinite alternate;
 }
 
 @keyframes heroGradient {
@@ -117,28 +117,83 @@
         background: linear-gradient(
             180deg,
             rgba(10, 22, 40, 0.88) 0%,
-            rgba(10, 22, 40, 0.72) 40%,
+            rgba(10, 22, 40, 0.65) 40%,
             rgba(10, 22, 40, 0.92) 100%
+        );
+    }
+    33% {
+        background: linear-gradient(
+            180deg,
+            rgba(10, 22, 40, 0.82) 0%,
+            rgba(15, 36, 64, 0.6) 45%,
+            rgba(10, 22, 40, 0.9) 100%
+        );
+    }
+    66% {
+        background: linear-gradient(
+            180deg,
+            rgba(10, 22, 40, 0.85) 0%,
+            rgba(0, 40, 80, 0.58) 40%,
+            rgba(10, 22, 40, 0.95) 100%
         );
     }
     100% {
         background: linear-gradient(
             180deg,
-            rgba(10, 22, 40, 0.82) 0%,
-            rgba(15, 36, 64, 0.68) 40%,
-            rgba(10, 22, 40, 0.95) 100%
+            rgba(10, 22, 40, 0.8) 0%,
+            rgba(15, 36, 64, 0.62) 42%,
+            rgba(10, 22, 40, 0.93) 100%
         );
     }
 }
 
-/* --- Floating animation for stats --- */
-.hero-stats {
-    animation: floatSoft 6s ease-in-out infinite;
+/* --- Animated gradient orbs behind hero --- */
+.hero-bg::before {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: -10%;
+    width: 50%;
+    height: 60%;
+    background: radial-gradient(ellipse, rgba(0, 119, 204, 0.15) 0%, transparent 70%);
+    filter: blur(60px);
+    animation: orbFloat1 12s ease-in-out infinite;
+    z-index: 0;
+    pointer-events: none;
 }
 
-@keyframes floatSoft {
+.hero-bg::after {
+    content: '';
+    position: absolute;
+    bottom: 10%;
+    right: -10%;
+    width: 40%;
+    height: 50%;
+    background: radial-gradient(ellipse, rgba(200, 150, 62, 0.1) 0%, transparent 70%);
+    filter: blur(60px);
+    animation: orbFloat2 15s ease-in-out infinite;
+    z-index: 0;
+    pointer-events: none;
+}
+
+@keyframes orbFloat1 {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(5%, -10%) scale(1.1); }
+}
+
+@keyframes orbFloat2 {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(-5%, 8%) scale(1.15); }
+}
+
+/* --- Floating animation for stats --- */
+.hero-stats {
+    animation: floatGlass 6s ease-in-out infinite;
+}
+
+@keyframes floatGlass {
     0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-6px); }
+    50% { transform: translateY(-8px); }
 }
 
 /* --- Enhanced map pin glow --- */
@@ -161,14 +216,20 @@
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 120px;
+    width: 200px;
     height: 2px;
-    background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
-    opacity: 0.3;
+    background: linear-gradient(90deg, transparent, var(--color-accent), var(--color-gold), var(--color-accent), transparent);
+    opacity: 0.4;
+    animation: separatorGlow 3s ease-in-out infinite;
+}
+
+@keyframes separatorGlow {
+    0%, 100% { opacity: 0.3; width: 120px; }
+    50% { opacity: 0.6; width: 200px; }
 }
 
 .dark-section::after {
-    background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+    background: linear-gradient(90deg, transparent, var(--color-gold), var(--color-accent-light), var(--color-gold), transparent);
 }
 
 .cta-section::after,
@@ -197,6 +258,141 @@
 .nav-link.active::after {
     width: 60%;
     left: 20%;
+}
+
+/* ============================================
+   Glassmorphism & Gradient Enhancement Layer
+   ============================================ */
+
+/* --- Glass card mixin utility --- */
+.glass-card {
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* --- Enhanced section tag with glass effect --- */
+.section-tag {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 2px 8px rgba(0, 119, 204, 0.08);
+    transition: all var(--transition-base);
+}
+
+.section-tag:hover {
+    background: rgba(0, 119, 204, 0.1);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 119, 204, 0.12);
+}
+
+/* --- Enhanced scroll indicator --- */
+.scroll-indicator {
+    position: relative;
+}
+
+.scroll-indicator::before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--color-accent);
+    box-shadow: 0 0 10px rgba(0, 119, 204, 0.5);
+    animation: scrollDot 2s ease-in-out infinite;
+}
+
+@keyframes scrollDot {
+    0%, 100% { transform: translateX(-50%) translateY(0); opacity: 1; }
+    50% { transform: translateX(-50%) translateY(30px); opacity: 0.3; }
+}
+
+/* --- Glassmorphic footer social icons --- */
+.footer-social a {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all var(--transition-base);
+}
+
+.footer-social a:hover {
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: 0 8px 24px rgba(0, 119, 204, 0.3);
+}
+
+/* --- Enhanced chatbot with glass --- */
+.chatbot-toggle {
+    background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 100%);
+    box-shadow: 0 8px 32px rgba(0, 119, 204, 0.4), inset 0 1px 0 rgba(255,255,255,0.2);
+}
+
+.chatbot-toggle:hover {
+    box-shadow: 0 12px 40px rgba(0, 119, 204, 0.5), inset 0 1px 0 rgba(255,255,255,0.2);
+}
+
+.chatbot-window {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* --- Nav CTA button enhancement --- */
+.nav-cta {
+    background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 100%) !important;
+    box-shadow: 0 4px 14px rgba(0, 119, 204, 0.3);
+    transition: all var(--transition-base) !important;
+}
+
+.nav-cta:hover {
+    box-shadow: 0 6px 20px rgba(0, 119, 204, 0.45) !important;
+    transform: translateY(-2px);
+}
+
+/* --- Cookie banner glass effect --- */
+.cookie-banner {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* --- Enhanced preloader with gradient --- */
+#preloader {
+    background: var(--gradient-dark);
+}
+
+.loader-ring {
+    border-top-color: transparent;
+    background: conic-gradient(from 0deg, transparent, var(--color-accent), transparent);
+    -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 3px), #000 calc(100% - 2px));
+    mask: radial-gradient(farthest-side, transparent calc(100% - 3px), #000 calc(100% - 2px));
+}
+
+/* --- Capability section glass card --- */
+.cap-image-wrapper {
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+.cap-image-overlay {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+/* --- Reduced motion support --- */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .hero-stats { animation: none; }
+    .hero-overlay { animation: none; }
+    .hero-bg::before, .hero-bg::after { animation: none; }
+    .text-gradient { animation: none; }
 }
 
 /* --- News card hover line --- */
