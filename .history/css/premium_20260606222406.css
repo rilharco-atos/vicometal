@@ -75,11 +75,6 @@
     border: 1px solid rgba(255,255,255,0.06);
     border-radius: inherit;
     pointer-events: none;
-    transition: border-color 0.4s ease;
-}
-
-.marquee-tile:hover::after {
-    border-color: rgba(0, 119, 204, 0.25);
 }
 
 @media (max-width: 768px) {
