@@ -1,0 +1,384 @@
+/* ============================================
+   VICOMETAL — Visual Upgrade Layer
+   Enhanced glassmorphism, gradients, micro-interactions
+   Layered on top of existing styles
+   ============================================ */
+
+/* --- Enhanced Design Tokens --- */
+:root {
+    --glass-shimmer: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,0.05) 100%);
+    --glass-border-glow: 1px solid rgba(255,255,255,0.12);
+    --shadow-glass: 0 8px 32px rgba(0,0,0,0.12), inset 0 1px 0 rgba(255,255,255,0.08);
+    --gradient-aurora: linear-gradient(135deg, rgba(0,119,204,0.08) 0%, rgba(51,153,221,0.05) 25%, rgba(200,150,62,0.04) 50%, rgba(0,119,204,0.06) 75%, transparent 100%);
+    --gradient-border-animated: linear-gradient(90deg, var(--color-accent), var(--color-gold), var(--color-accent-light), var(--color-accent));
+}
+
+/* --- 1. HERO SECTION PREMIUM --- */
+
+/* Animated gradient border glow on hero stats */
+.hero-stats {
+    position: relative;
+    background: rgba(255,255,255,0.04);
+    border: none;
+}
+
+.hero-stats::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(135deg, rgba(0,119,204,0.3), rgba(200,150,62,0.2), rgba(0,119,204,0.1));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    animation: borderRotate 6s linear infinite;
+}
+
+@keyframes borderRotate {
+    0% { filter: hue-rotate(0deg); }
+    100% { filter: hue-rotate(360deg); }
+}
+
+/* Hero title enhanced gradient */
+.hero-title .text-gradient {
+    background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 30%, var(--color-gold) 60%, var(--color-accent) 100%);
+    background-size: 300% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientFlow 6s ease-in-out infinite;
+}
+
+@keyframes gradientFlow {
+    0%, 100% { background-position: 0% center; }
+    50% { background-position: 100% center; }
+}
+
+/* --- 2. NAVBAR GLASS ENHANCEMENT --- */
+.navbar.scrolled {
+    background: rgba(10, 22, 40, 0.65);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 
+        0 4px 30px rgba(0,0,0,0.25),
+        inset 0 1px 0 rgba(255,255,255,0.06),
+        inset 0 -1px 0 rgba(0,0,0,0.2);
+}
+
+/* --- 3. SERVICE CARDS GLASS UPGRADE --- */
+.service-card {
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(0, 119, 204, 0.06);
+    box-shadow: 
+        0 4px 24px rgba(0,0,0,0.04),
+        inset 0 1px 0 rgba(255,255,255,0.8);
+    transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.service-card:hover {
+    background: rgba(255, 255, 255, 0.98);
+    border-color: rgba(0, 119, 204, 0.15);
+    box-shadow: 
+        0 20px 60px rgba(0, 119, 204, 0.08),
+        0 8px 24px rgba(0,0,0,0.06),
+        inset 0 1px 0 rgba(255,255,255,1),
+        0 0 0 1px rgba(0, 119, 204, 0.08);
+    transform: translateY(-8px) scale(1.01);
+}
+
+/* Animated gradient line on top of cards */
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--color-accent), var(--color-gold), var(--color-accent-light));
+    background-size: 200% 100%;
+    opacity: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+.service-card:hover::before {
+    opacity: 1;
+    transform: scaleX(1);
+    animation: gradientSlide 2s linear infinite;
+}
+
+@keyframes gradientSlide {
+    0% { background-position: 0% center; }
+    100% { background-position: 200% center; }
+}
+
+/* --- 4. CAPABILITIES GLASS CARD --- */
+.cap-image-wrapper {
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 
+        0 24px 80px rgba(0,0,0,0.3),
+        0 4px 16px rgba(0,0,0,0.2),
+        inset 0 1px 0 rgba(255,255,255,0.05);
+    transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.cap-image-wrapper:hover {
+    box-shadow: 
+        0 32px 100px rgba(0,0,0,0.35),
+        0 8px 24px rgba(0,0,0,0.25),
+        0 0 40px rgba(0, 119, 204, 0.08),
+        inset 0 1px 0 rgba(255,255,255,0.08);
+    transform: translateY(-4px);
+}
+
+.cap-image-overlay {
+    backdrop-filter: blur(12px) saturate(1.2);
+    -webkit-backdrop-filter: blur(12px) saturate(1.2);
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* --- 5. PROJECT CARDS DEPTH --- */
+.project-image {
+    border: 1px solid rgba(0,0,0,0.06);
+    transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.project-card:hover .project-image {
+    border-color: rgba(0, 119, 204, 0.15);
+    box-shadow: 
+        0 24px 80px rgba(0,0,0,0.15),
+        0 0 30px rgba(0, 119, 204, 0.06);
+}
+
+/* Project detail overlay glass */
+.project-details {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    background: rgba(10, 22, 40, 0.3);
+    border-radius: var(--radius-md);
+    padding: var(--space-md);
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* --- 6. SECTION TRANSITIONS --- */
+
+/* Aurora ambient background on services */
+.services-section::before {
+    background: var(--gradient-aurora);
+    animation: auroraShift 15s ease-in-out infinite alternate;
+}
+
+@keyframes auroraShift {
+    0% { opacity: 0.6; transform: scale(1) rotate(0deg); }
+    50% { opacity: 0.8; transform: scale(1.05) rotate(1deg); }
+    100% { opacity: 0.6; transform: scale(1) rotate(-1deg); }
+}
+
+/* Gradient section dividers */
+.services-section::after,
+.capabilities-showcase::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(0,119,204,0.2), rgba(200,150,62,0.15), rgba(0,119,204,0.2), transparent);
+}
+
+/* --- 7. MAP SECTION GLASS --- */
+.map-container {
+    border: 1px solid rgba(255,255,255,0.08);
+    background: rgba(255,255,255,0.02);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: var(--radius-lg);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.05), 0 16px 48px rgba(0,0,0,0.2);
+}
+
+/* --- 8. NEWS CARDS GLASS --- */
+.news-card {
+    background: white;
+    border: 1px solid rgba(0,0,0,0.04);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.04), inset 0 1px 0 rgba(255,255,255,0.8);
+    transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.news-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 
+        0 20px 60px rgba(0,0,0,0.08),
+        0 0 0 1px rgba(0, 119, 204, 0.06),
+        inset 0 1px 0 rgba(255,255,255,1);
+    border-color: rgba(0, 119, 204, 0.1);
+}
+
+/* --- 9. SECTOR ITEMS GLASS --- */
+.sector-item {
+    background: rgba(255,255,255,0.04);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: var(--radius-md);
+    transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.05);
+}
+
+.sector-item:hover {
+    background: rgba(255,255,255,0.08);
+    border-color: rgba(0, 119, 204, 0.2);
+    transform: translateY(-3px);
+    box-shadow: 
+        0 8px 24px rgba(0,0,0,0.15),
+        inset 0 1px 0 rgba(255,255,255,0.1),
+        0 0 20px rgba(0, 119, 204, 0.05);
+}
+
+/* --- 10. CTA SECTION AMBIENT GLOW --- */
+.cta-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -25%;
+    width: 150%;
+    height: 200%;
+    background: 
+        radial-gradient(ellipse at 30% 50%, rgba(0, 119, 204, 0.06) 0%, transparent 50%),
+        radial-gradient(ellipse at 70% 50%, rgba(200, 150, 62, 0.04) 0%, transparent 50%);
+    animation: ctaAmbient 8s ease-in-out infinite alternate;
+    pointer-events: none;
+}
+
+@keyframes ctaAmbient {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    100% { transform: translate(-2%, 2%) rotate(2deg); }
+}
+
+/* --- 11. ENHANCED SCROLL REVEAL SECTION --- */
+.scroll-reveal-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.scroll-reveal-wrapper::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 10%, rgba(200,150,62,0.3) 50%, transparent 90%);
+}
+
+/* --- 12. FOOTER GLASS --- */
+.footer-top {
+    position: relative;
+}
+
+.footer-top::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(0,119,204,0.2), rgba(200,150,62,0.15), transparent);
+}
+
+/* --- 13. GLOBAL MICRO-INTERACTIONS --- */
+
+/* Smooth scale on all interactive elements */
+a, button {
+    transition: transform 0.2s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.2s ease;
+}
+
+/* Enhanced focus states with glow */
+:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+    box-shadow: 0 0 0 4px rgba(0, 119, 204, 0.1);
+}
+
+/* --- 14. ANIMATED SECTION BACKGROUNDS --- */
+
+/* Mesh grid pattern on dark sections */
+.dark-section {
+    background-image: 
+        linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+    background-size: 60px 60px;
+    background-position: center;
+}
+
+/* --- 15. ENHANCED MARQUEE SECTION --- */
+.marquee-section {
+    position: relative;
+}
+
+.marquee-section .marquee-tile {
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.06);
+}
+
+.marquee-section .marquee-tile:hover {
+    box-shadow: 
+        0 16px 48px rgba(0,0,0,0.4),
+        0 0 30px rgba(0, 119, 204, 0.1);
+    border-color: rgba(0, 119, 204, 0.2);
+}
+
+/* --- 16. STAT COUNTER ENHANCED --- */
+.stat-item {
+    position: relative;
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius-sm);
+    transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+    background: rgba(255,255,255,0.04);
+}
+
+.stat-item:hover .stat-number {
+    color: var(--color-accent-light);
+}
+
+.stat-item:hover .stat-suffix {
+    text-shadow: 0 0 12px rgba(200, 150, 62, 0.4);
+}
+
+/* --- 17. SMOOTH PAGE LOAD --- */
+@keyframes pageReveal {
+    from {
+        opacity: 0;
+        filter: blur(4px);
+    }
+    to {
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+body {
+    animation: pageReveal 0.6s ease-out;
+}
+
+/* --- REDUCED MOTION --- */
+@media (prefers-reduced-motion: reduce) {
+    .hero-stats::before { animation: none; }
+    .hero-title .text-gradient { animation: none; }
+    .services-section::before { animation: none; }
+    .cta-section::before { animation: none; }
+    .service-card:hover::before { animation: none; }
+    body { animation: none; }
+}
