@@ -34,7 +34,7 @@ export default function Header() {
     >
       <div className="flex justify-between items-center px-6 md:px-margin max-w-[1440px] mx-auto">
         <Link href="/" className="flex items-center gap-3 group">
-          <Image src="/assets/vicometal-logo.svg" alt="Vicometal" width={140} height={36} className="brightness-0 invert opacity-90 group-hover:opacity-100 transition-opacity" />
+          <Image src="/vicometal/assets/vicometal-logo.svg" alt="Vicometal" width={140} height={36} className="brightness-0 invert opacity-90 group-hover:opacity-100 transition-opacity" />
         </Link>
 
         <nav className="hidden lg:flex items-center gap-8">

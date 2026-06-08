@@ -48,7 +48,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="md:col-span-4">
             <Link href="/" className="inline-block mb-5">
-              <Image src="/assets/vicometal-logo.svg" alt="Vicometal" width={160} height={40} className="brightness-0 invert opacity-90" />
+              <Image src="/vicometal/assets/vicometal-logo.svg" alt="Vicometal" width={160} height={40} className="brightness-0 invert opacity-90" />
             </Link>
             <p className="font-body text-body-md text-on-surface-variant max-w-sm mb-6">
               Desde 2001 a fornecer soluções de engenharia e metalomecânica para os mais exigentes projetos industriais em 4 continentes.
@@ -129,7 +129,7 @@ export default function Footer() {
             </Link>
             <a href="https://atos.net" target="_blank" rel="noopener" className="flex items-center gap-2 font-mono text-[10px] text-on-tertiary-container opacity-60 hover:opacity-100 transition-opacity">
               <span>Dev by</span>
-              <Image src="/assets/atos-logo.png" alt="Atos" width={40} height={16} className="brightness-0 invert opacity-60" />
+              <Image src="/vicometal/assets/atos-logo.png" alt="Atos" width={40} height={16} className="brightness-0 invert opacity-60" />
             </a>
           </div>
         </div>
