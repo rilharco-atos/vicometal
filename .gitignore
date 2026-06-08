@@ -1,7 +1,7 @@
 node_modules
 .next
 .history
-.github
 .vscode
+out
 *.tsbuildinfo
 next-env.d.ts
