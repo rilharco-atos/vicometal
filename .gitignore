@@ -5,3 +5,10 @@ node_modules
 out
 *.tsbuildinfo
 next-env.d.ts
+
+# Old static website files (migrated to Next.js)
+css/
+js/
+assets/
+uploads/
+staticwebapp.config.json
