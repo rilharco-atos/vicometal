@@ -1,324 +1,381 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html class="dark" lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfólio de projetos industriais — estruturas metálicas, equipamentos, centrais e instalações em mais de 15 países.">
-    <title>Portfólio — Grupo Vicometal</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/effects.css">
-    <link rel="stylesheet" href="css/pages.css">
-    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta name="description" content="Portfólio de projetos industriais — estruturas metálicas, equipamentos, centrais e instalações em mais de 15 países.">
+<title>VICOMETAL - Projetos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "on-secondary-fixed-variant": "#004f54",
+                "on-primary-fixed": "#1a1c1e",
+                "on-secondary-fixed": "#002022",
+                "surface-variant": "#323536",
+                "on-tertiary": "#2b3137",
+                "wireframe-stroke": "rgba(255, 255, 255, 0.1)",
+                "primary-fixed": "#e2e2e5",
+                "surface-tint": "#c6c6c9",
+                "on-secondary-container": "#00686f",
+                "secondary": "#d3fbff",
+                "on-secondary": "#00363a",
+                "metallic-charcoal": "#1A1D21",
+                "on-surface-variant": "#c5c6ca",
+                "tertiary-container": "#0b1116",
+                "surface-container-low": "#191c1d",
+                "on-tertiary-fixed-variant": "#41474e",
+                "primary-container": "#0f1113",
+                "on-background": "#e1e3e4",
+                "outline-variant": "#45474a",
+                "on-tertiary-container": "#777d84",
+                "inverse-on-surface": "#2e3132",
+                "on-surface": "#e1e3e4",
+                "outline": "#8f9194",
+                "secondary-container": "#00eefc",
+                "surface-container-highest": "#323536",
+                "primary-fixed-dim": "#c6c6c9",
+                "structural-gray": "#ADB5BD",
+                "primary": "#c6c6c9",
+                "surface-container": "#1d2021",
+                "on-primary": "#2f3133",
+                "surface": "#111415",
+                "secondary-fixed-dim": "#00dbe9",
+                "inverse-surface": "#e1e3e4",
+                "tertiary-fixed": "#dde3eb",
+                "surface-dim": "#111415",
+                "surface-container-high": "#282a2b",
+                "tertiary-fixed-dim": "#c1c7ce",
+                "on-primary-container": "#7b7d7f",
+                "secondary-fixed": "#7df4ff",
+                "on-error-container": "#ffdad6",
+                "on-primary-fixed-variant": "#454749",
+                "error-container": "#93000a",
+                "surface-container-lowest": "#0c0f10",
+                "tertiary": "#c1c7ce",
+                "error": "#ffb4ab",
+                "surface-bright": "#373a3b",
+                "on-error": "#690005",
+                "background": "#111415",
+                "on-tertiary-fixed": "#161c22",
+                "inverse-primary": "#5d5e61",
+                "blueprint-cyan": "#00F0FF"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "margin": "48px",
+                "unit": "4px",
+                "gutter": "24px",
+                "container-max": "1440px"
+            },
+            "fontFamily": {
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"],
+                "technical-data": ["JetBrains Mono"],
+                "label-caps": ["JetBrains Mono"],
+                "body-lg": ["Inter"]
+            },
+            "fontSize": {
+                "headline-lg": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "500" }],
+                "display-lg": ["72px", { "lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "700" }],
+                "technical-data": ["14px", { "lineHeight": "1.4", "fontWeight": "400" }],
+                "label-caps": ["12px", { "lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "500" }],
+                "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }]
+            }
+        }
+    }
+}
+</script>
+<style>
+body {
+    background-image: 
+        linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 24px 24px;
+    background-attachment: fixed;
+}
+
+.corner-brackets {
+    position: relative;
+}
+.corner-brackets::before, .corner-brackets::after,
+.corner-brackets-inner::before, .corner-brackets-inner::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-color: rgba(255, 255, 255, 0.3);
+    border-style: solid;
+    pointer-events: none;
+    transition: border-color 0.3s ease;
+}
+.group:hover .corner-brackets::before,
+.group:hover .corner-brackets::after,
+.group:hover .corner-brackets-inner::before,
+.group:hover .corner-brackets-inner::after {
+    border-color: #00F0FF;
+    box-shadow: 0 0 8px rgba(0, 240, 255, 0.3);
+}
+
+.corner-brackets::before { top: -1px; left: -1px; border-width: 1px 0 0 1px; }
+.corner-brackets::after { top: -1px; right: -1px; border-width: 1px 1px 0 0; }
+.corner-brackets-inner::before { bottom: -1px; left: -1px; border-width: 0 0 1px 1px; }
+.corner-brackets-inner::after { bottom: -1px; right: -1px; border-width: 0 1px 1px 0; }
+</style>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 </head>
-<body>
-    <!-- Navigation -->
-    <header id="navbar" class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="nav-logo">
-                <img src="assets/vicometal-logo.svg" alt="Vicometal — Grupo Industrial" class="logo-img" />
-            </a>
-            <nav class="nav-menu" id="navMenu">
-                <a href="index.html" class="nav-link">Início</a>
-                <a href="quem-somos.html" class="nav-link">Quem Somos</a>
-                <a href="capacidades.html" class="nav-link">Capacidades</a>
-                <a href="portfolio.html" class="nav-link active">Portfólio</a>
-                <a href="servicos.html" class="nav-link">Serviços</a>
-                <a href="qualidade.html" class="nav-link">Qualidade</a>
-                <a href="contactos.html" class="nav-link">Contactos</a>
-                <a href="orcamento.html" class="nav-link nav-cta">Solicitar Orçamento</a>
-            </nav>
-            <button class="nav-toggle" id="navToggle" aria-label="Menu">
-                <span></span><span></span><span></span>
-            </button>
-        </div>
-    </header>
+<body class="bg-background text-on-surface font-body-md min-h-screen flex flex-col antialiased transition-all duration-[1ms]">
+<!-- Navigation -->
+<header class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-wireframe-stroke" id="main-header">
+<div class="flex justify-between items-center px-margin py-6 max-w-container-max mx-auto transition-all duration-500 ease-out">
+<a href="index.html" class="font-headline-md text-headline-md text-on-surface tracking-tighter flex items-center gap-2 no-underline">
+<span class="material-symbols-outlined text-blueprint-cyan text-[32px]">precision_manufacturing</span>
+VICOMETAL
+</a>
+<nav class="hidden md:flex space-x-12">
+<a class="font-technical-data text-label-caps uppercase text-on-surface-variant hover:text-blueprint-cyan transition-all duration-300" href="index.html">Início</a>
+<a class="font-technical-data text-label-caps uppercase text-on-surface-variant hover:text-blueprint-cyan transition-all duration-300" href="servicos.html">Serviços</a>
+<a class="font-technical-data text-label-caps uppercase text-blueprint-cyan border-b border-transparent pb-1 relative after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-full after:bg-blueprint-cyan after:origin-left after:scale-x-100 transition-transform duration-300" href="portfolio.html">Projetos</a>
+<a class="font-technical-data text-label-caps uppercase text-on-surface-variant hover:text-blueprint-cyan transition-all duration-300" href="quem-somos.html">Quem Somos</a>
+</nav>
+<a href="orcamento.html" class="hidden md:inline-flex px-6 py-3 border border-wireframe-stroke hover:border-blueprint-cyan text-on-surface hover:text-blueprint-cyan font-technical-data text-label-caps uppercase transition-all duration-300 bg-metallic-charcoal/50 hover:bg-metallic-charcoal hover:shadow-[0_0_15px_rgba(0,240,255,0.2)] no-underline">
+Solicitar Orçamento
+</a>
+<button class="md:hidden text-on-surface" aria-label="Menu">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">menu</span>
+</button>
+</div>
+</header>
 
-    <!-- Page Hero -->
-    <section class="page-hero">
-        <div class="page-hero-overlay"></div>
-        <div class="container">
-            <div class="page-hero-content fade-up">
-                <span class="page-hero-label">PROJETOS</span>
-                <h1>Portfólio</h1>
-                <p>Conheça alguns dos projetos que marcam o nosso percurso em 4 continentes.</p>
-            </div>
-        </div>
-    </section>
+<!-- Main Content -->
+<main class="flex-grow pt-32 pb-24 px-margin max-w-container-max mx-auto w-full">
+<!-- Filters -->
+<div class="flex flex-wrap justify-center gap-8 mb-16 font-label-caps text-label-caps">
+<button class="relative pb-1 text-blueprint-cyan tracking-widest uppercase transition-colors after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-full after:bg-blueprint-cyan after:origin-left after:scale-x-100 after:transition-transform after:duration-300">TODOS</button>
+<button class="relative pb-1 text-on-surface-variant hover:text-on-surface tracking-widest uppercase transition-colors after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-full after:bg-blueprint-cyan after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300">ESTRUTURAS</button>
+<button class="relative pb-1 text-on-surface-variant hover:text-on-surface tracking-widest uppercase transition-colors after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-full after:bg-blueprint-cyan after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300">ENERGIA</button>
+<button class="relative pb-1 text-on-surface-variant hover:text-on-surface tracking-widest uppercase transition-colors after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-full after:bg-blueprint-cyan after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300">INDUSTRIAL</button>
+</div>
 
-    <!-- Portfolio Filter -->
-    <section class="section">
-        <div class="container">
-            <div class="portfolio-filter fade-up">
-                <button class="filter-btn active" data-filter="all">Todos</button>
-                <button class="filter-btn" data-filter="estruturas">Estruturas</button>
-                <button class="filter-btn" data-filter="equipamentos">Equipamentos</button>
-                <button class="filter-btn" data-filter="montagem">Montagem</button>
-                <button class="filter-btn" data-filter="inox">Inox</button>
-                <button class="filter-btn" data-filter="energia">Energia</button>
-            </div>
-            <div class="portfolio-grid">
-                <div class="portfolio-card fade-up" data-category="equipamentos">
-                    <div class="portfolio-image">
-                        <img src="uploads/destaques/evaporador-quench.jpg" alt="Evaporador Quench" loading="lazy">
-                        <div class="portfolio-overlay">
-                            <span class="portfolio-category">Equipamentos</span>
-                            <h3>Evaporador Quench</h3>
-                            <p>Equipamento de arrefecimento para indústria siderúrgica. 85 ton de aço ao carbono.</p>
-                            <span class="portfolio-location">Alemanha</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-card fade-up" data-category="montagem">
-                    <div class="portfolio-image">
-                        <img src="uploads/destaques/central-asfalto.jpg" alt="Central de Asfalto" loading="lazy">
-                        <div class="portfolio-overlay">
-                            <span class="portfolio-category">Montagem</span>
-                            <h3>Central de Asfalto</h3>
-                            <p>Montagem completa de central de produção de asfalto. Estruturas + equipamentos mecânicos.</p>
-                            <span class="portfolio-location">Marrocos</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-card fade-up" data-category="equipamentos">
-                    <div class="portfolio-image">
-                        <img src="uploads/destaques/ciclone-alemanha.jpg" alt="Ciclones Industriais" loading="lazy">
-                        <div class="portfolio-overlay">
-                            <span class="portfolio-category">Equipamentos</span>
-                            <h3>Ciclones Industriais</h3>
-                            <p>Fabrico e montagem de ciclones para captação de poeiras em instalação cimenteira.</p>
-                            <span class="portfolio-location">Alemanha</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-card fade-up" data-category="estruturas">
-                    <div class="portfolio-image">
-                        <img src="uploads/destaques/soldadura-mig-mag.jpg" alt="Estruturas Metálicas Nave Industrial" loading="lazy">
-                        <div class="portfolio-overlay">
-                            <span class="portfolio-category">Estruturas</span>
-                            <h3>Nave Industrial 5.000 m²</h3>
-                            <p>Projeto e fabrico de estrutura metálica para nave industrial logística.</p>
-                            <span class="portfolio-location">Portugal</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-card fade-up" data-category="montagem">
-                    <div class="portfolio-image">
-                        <img src="uploads/destaques/transportadores-galeria.jpg" alt="Transportadores de Galeria" loading="lazy">
-                        <div class="portfolio-overlay">
-                            <span class="portfolio-category">Montagem</span>
-                            <h3>Transportadores de Galeria</h3>
-                            <p>Fabrico e montagem de sistema de transportadores para mineração.</p>
-                            <span class="portfolio-location">Espanha</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-card fade-up" data-category="energia">
-                    <div class="portfolio-image" style="background: linear-gradient(135deg, var(--bg-tertiary), var(--bg-secondary)); display:flex; align-items:center; justify-content:center; min-height:280px;">
-                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1" opacity="0.5"><path d="M13 2L3 14h9l-1 10 10-12h-9l1-10z"/></svg>
-                        <div class="portfolio-overlay">
-                            <span class="portfolio-category">Energia</span>
-                            <h3>Subestação Elétrica</h3>
-                            <p>Estruturas metálicas para subestação AT/MT com galvanização a quente.</p>
-                            <span class="portfolio-location">Angola</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-card fade-up" data-category="inox">
-                    <div class="portfolio-image" style="background: linear-gradient(135deg, var(--bg-tertiary), var(--bg-secondary)); display:flex; align-items:center; justify-content:center; min-height:280px;">
-                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1" opacity="0.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-                        <div class="portfolio-overlay">
-                            <span class="portfolio-category">Inox</span>
-                            <h3>Tanques Farmacêuticos</h3>
-                            <p>Fabrico de tanques em AISI 316L com polimento interior para indústria farmacêutica.</p>
-                            <span class="portfolio-location">Portugal</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-card fade-up" data-category="estruturas">
-                    <div class="portfolio-image" style="background: linear-gradient(135deg, var(--bg-tertiary), var(--bg-secondary)); display:flex; align-items:center; justify-content:center; min-height:280px;">
-                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1" opacity="0.5"><path d="M2 20h20M5 20V8l7-5 7 5v12"/><path d="M9 20v-6h6v6"/></svg>
-                        <div class="portfolio-overlay">
-                            <span class="portfolio-category">Estruturas</span>
-                            <h3>Plataforma Offshore</h3>
-                            <p>Componentes estruturais para plataforma de exploração petrolífera offshore.</p>
-                            <span class="portfolio-location">Noruega</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- Project Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Card 1 -->
+<div class="project-card opacity-0 translate-y-8 transform transition-all duration-700 ease-out group relative bg-surface border border-wireframe-stroke p-4 flex flex-col gap-4 cursor-pointer hover:border-blueprint-cyan/50 hover:bg-surface-container-high corner-brackets">
+<div class="corner-brackets-inner h-full w-full absolute inset-0 pointer-events-none"></div>
+<div class="relative w-full aspect-[4/3] bg-metallic-charcoal overflow-hidden border border-wireframe-stroke">
+<img alt="Componente Aeroespacial" class="w-full h-full object-cover transition-all duration-700 ease-in-out group-hover:opacity-0 group-hover:scale-105 grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCL8iYauD-CYPuJdgI51Z9902Zxf7bpHzZTeYurnb5DlOeWsPT3qL_cIr3FPcMPEovtHJV_InEP4dORGJbesz_lpZ7f7tDmOJa-kIXnRoSsaNkSNnLxkeD47KVj-NOsdL4LPBec1PRIdeSviOkUh72qYwWxphW_ZyNHdkudzan93DeGKfsJPUzJqu8q7bMrGCRuI9P2Ga03pJeYiJa48Hf4Ex0Rz6hDQL7MQcEvl2_Zu7vrriyN6zqy4vgg_wdYD9cg_MtFL5b2rQ"/>
+<div class="absolute inset-0 bg-metallic-charcoal flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-in-out">
+<img alt="Wireframe Turbina" class="w-full h-full object-cover opacity-60 mix-blend-screen invert contrast-150 transform scale-100 group-hover:scale-105 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUar9MecFwtCI-XnZO03pfSNgxBxRJ4ESiv0bZqrs3Ns0U1iVyN7E0eCibrye_U03TTbCK9jueykQpE8NA2aeu7JrDvPkp5Gm7D10MdHjgrrM7z8kW5y2kPnooxbedvU4ySVvyH93dhyTZfiIn3O9oGxz7jZpEoLSpbnuy-LKexFS6g7KO4btPiOooCQxeTJS5DiUEV5HFdPDx3ZZVFvAfCd25sf8D3evzOdJNyqQF6tpc9SE0FlGmkmQ4hKxYmtha4kOdowfwVA"/>
+</div>
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none z-20">
+<button class="opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 ease-out bg-surface text-on-surface border border-wireframe-stroke px-8 py-3 font-technical-data text-label-caps uppercase tracking-widest group-hover:border-blueprint-cyan group-hover:text-blueprint-cyan group-hover:shadow-[0_0_15px_rgba(0,240,255,0.2)] pointer-events-auto">
+VER PROJETO
+</button>
+</div>
+</div>
+<div class="flex flex-col gap-2 relative z-10 pt-2">
+<h3 class="font-technical-data text-technical-data uppercase text-on-surface tracking-wide">COMPONENTE TURBINA AEROESPACIAL</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed opacity-80">Maquinagem de precisão em liga de titânio.</p>
+</div>
+</div>
 
-    <!-- Stats -->
-    <section class="section section-dark">
-        <div class="container">
-            <div class="portfolio-summary fade-up" style="text-align:center;">
-                <h2 class="section-title">Números que Falam</h2>
-                <div class="capabilities-stats-grid" style="margin-top:3rem;">
-                    <div class="cap-stat-card">
-                        <span class="cap-stat-number">500+</span>
-                        <span class="cap-stat-label">Projetos Entregues</span>
-                    </div>
-                    <div class="cap-stat-card">
-                        <span class="cap-stat-number">15+</span>
-                        <span class="cap-stat-label">Países</span>
-                    </div>
-                    <div class="cap-stat-card">
-                        <span class="cap-stat-number">50.000+</span>
-                        <span class="cap-stat-label">Toneladas Fabricadas</span>
-                    </div>
-                    <div class="cap-stat-card">
-                        <span class="cap-stat-number">98%</span>
-                        <span class="cap-stat-label">Taxa de Entrega no Prazo</span>
-                    </div>
-                </div>
-                <div style="margin-top:3rem;">
-                    <a href="casos-estudo.html" class="btn btn-primary">Ver Casos de Estudo Detalhados</a>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- Card 2 -->
+<div class="project-card opacity-0 translate-y-8 transform transition-all duration-700 ease-out group relative bg-surface border border-wireframe-stroke p-4 flex flex-col gap-4 cursor-pointer hover:border-blueprint-cyan/50 hover:bg-surface-container-high corner-brackets">
+<div class="corner-brackets-inner h-full w-full absolute inset-0 pointer-events-none"></div>
+<div class="relative w-full aspect-[4/3] bg-metallic-charcoal overflow-hidden border border-wireframe-stroke">
+<img alt="Secção de Ponte" class="w-full h-full object-cover transition-all duration-700 ease-in-out group-hover:opacity-0 group-hover:scale-105 grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCB_Ju891OEbymGSxODtespu0nXFj9BwQGdF3cqk155Z_x3in3TsXTg4cx0VlFJdp24_vM5sTgh1X76MsGx_ndc0wDfWgb4UF9SV3dvEfaNSkk7JuePI0h6xk8-esjS13VGiOip-DnwWA6Ik6JHx_RYhi99645wN30jeE6nW1ycZ3mvtlbRs2XsQZARRqBhISgDYX_jJZY1JBSzZK4xvBhRObtFdJKBImB6-C7G8sYHBv1Wxi-xFEYKcznP6HxcS_mk9G1zg9bJZg"/>
+<div class="absolute inset-0 bg-metallic-charcoal flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-in-out">
+<img alt="Wireframe Ponte" class="w-full h-full object-cover opacity-60 mix-blend-screen invert contrast-150 transform scale-100 group-hover:scale-105 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2phE2nCK-qhzYwJKwsKD-jnRBkp9kZH4DUpVr5Zfp6cCmihxnh_uSqYYbx1qRqVCLWw6anHqd8EitH2eRhOgSMcbmTiAR9KC3nhmy1zlvY5dz_wQRtE5qcNup_nmkgjDC7NKrQPBRef62bJltZ_9mTOczEoEu7-jWMxA4D1dHQoHyoSkeEtk0XHVLPkK0eBTw9RUkQrdigQsAJzt7wrSUZ5wFffIxIpw7jAh2OnTrTfTNyrfl5FgOeVhiK3XdT_l2wkkqRR63Wg"/>
+</div>
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none z-20">
+<button class="opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 ease-out bg-surface text-on-surface border border-wireframe-stroke px-8 py-3 font-technical-data text-label-caps uppercase tracking-widest group-hover:border-blueprint-cyan group-hover:text-blueprint-cyan group-hover:shadow-[0_0_15px_rgba(0,240,255,0.2)] pointer-events-auto">
+VER PROJETO
+</button>
+</div>
+</div>
+<div class="flex flex-col gap-2 relative z-10 pt-2">
+<h3 class="font-technical-data text-technical-data uppercase text-on-surface tracking-wide">SECÇÃO DE PONTE</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed opacity-80">Fabricação e soldadura de aço estrutural pesado.</p>
+</div>
+</div>
 
-    <!-- Footer -->
-    <footer class="footer" id="footer">
-        <div class="footer-top">
-            <div class="container">
-                <div class="footer-grid">
-                    <div class="footer-brand">
-                        <a href="index.html" class="footer-logo">
-                            <img src="assets/vicometal-logo.svg" alt="Vicometal" class="logo-img" />
-                        </a>
-                        <p class="footer-desc">Desde 2001 a fornecer soluções de engenharia e metalomecânica para os mais exigentes projetos industriais em 4 continentes.</p>
-                        <div class="footer-social">
-                            <a href="https://www.facebook.com/grupovicometal/?locale=pt_PT" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
-                            <a href="https://www.linkedin.com/in/grupo-vicometal-bb8061235" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 6a2 2 0 100-4 2 2 0 000 4z"/></svg></a>
-                            <a href="https://www.instagram.com/vicometal" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg></a>
-                        </div>
-                    </div>
-                    <div class="footer-nav">
-                        <h4>Navegação</h4>
-                        <ul>
-                            <li><a href="quem-somos.html">Quem Somos</a></li>
-                            <li><a href="capacidades.html">Capacidades</a></li>
-                            <li><a href="portfolio.html">Portfólio</a></li>
-                            <li><a href="servicos.html">Serviços</a></li>
-                            <li><a href="qualidade.html">Qualidade</a></li>
-                            <li><a href="contactos.html">Contactos</a></li>
-                            <li><a href="engenharia-digital.html">Engenharia Digital</a></li>
-                            <li><a href="sustentabilidade.html">Sustentabilidade</a></li>
-                            <li><a href="carreiras.html">Carreiras</a></li>
-                            <li><a href="portal-cliente.html">Portal Cliente</a></li>
-                            <li><a href="tour-virtual.html">Tour Virtual</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-nav">
-                        <h4>Serviços</h4>
-                        <ul>
-                            <li><a href="servicos.html#fabrico">Fabrico</a></li>
-                            <li><a href="servicos.html#montagem">Montagem</a></li>
-                            <li><a href="servicos.html#manutencao">Manutenção Industrial</a></li>
-                            <li><a href="servicos.html#soldadura">Soldadura</a></li>
-                            <li><a href="servicos.html#inox">Inox & Vicoinox</a></li>
-                            <li><a href="servicos.html#chave-na-mao">Chave-na-Mão</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-contact">
-                        <h4>Contactos</h4>
-                        <ul class="contact-list">
-                            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Barroco, 3130-400<br>Vila Nova de Anços · Soure</span></li>
-                            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg><a href="tel:+351239644616">(+351) 239 644 616</a></li>
-                            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg><a href="mailto:vicometal@vicometal.pt">vicometal@vicometal.pt</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <div class="container">
-                <div class="footer-bottom-content">
-                    <p>&copy; 2026 Vicometal — Vieira Cordeiro, S.A. · Todos os direitos reservados.</p>
-                    <div class="footer-links">
-                        <a href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener" class="footer-complaints"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg> Livro de Reclamações</a>
-                        <a href="#">Política de Privacidade</a>
-                        <a href="#">Termos de Utilização</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer-credit">
-            <span>Desenvolvido por</span>
-            <a href="https://atos.net" target="_blank" rel="noopener"><img src="assets/atos-logo.png" alt="Atos" class="footer-credit-logo" /></a>
-        </div>
-    </footer>
+<!-- Card 3 -->
+<div class="project-card opacity-0 translate-y-8 transform transition-all duration-700 ease-out group relative bg-surface border border-wireframe-stroke p-4 flex flex-col gap-4 cursor-pointer hover:border-blueprint-cyan/50 hover:bg-surface-container-high corner-brackets">
+<div class="corner-brackets-inner h-full w-full absolute inset-0 pointer-events-none"></div>
+<div class="relative w-full aspect-[4/3] bg-metallic-charcoal overflow-hidden border border-wireframe-stroke">
+<img alt="Engrenagem Aeroespacial" class="w-full h-full object-cover transition-all duration-700 ease-in-out group-hover:opacity-0 group-hover:scale-105 grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjZE_NPpwAgwT-xzq3ME_NJ0YOIe340HCdPpZm-tO5X7Vp2c5ZwX31R_1-3958o2s7HZ5E-9ntJHGm-wQfHxAjSYaTHWYp0R8XeyMTe2TOr_xu-BaBhcO1YJotr8pt8Ssyx77uu2t-LesbfSvEwcQeI1VZs3yY2uCpbr0rPNG9bzZnDuUDEaRvEVbd-X0tisr5WrnIc0MX-LDcu4zYaobesgTS8skNRlyiWBvIYJEOj4Nsyb_E3dTztSamcxX1uZ8lQW12wkBM0w"/>
+<div class="absolute inset-0 bg-metallic-charcoal flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-in-out">
+<img alt="Wireframe Engrenagem" class="w-full h-full object-cover opacity-60 mix-blend-screen invert contrast-150 transform scale-100 group-hover:scale-105 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPaF72syLn1Qxf3KeR5JVTfFTt4EEoHuD4Sez7X-gM8archQwuTo9gFEJP8hYQ-mLt3SAbhxQJg55MBwQEsG1INHTh5DKrSq0Bvf-KNXK6_cigVPOlu-igGfi-J9cbHMleR2qRz3lJUzd-UN-sQLhH_d_NnwBdZjGvt-ryApeUiYpYK5TXRxIFkRnPYdWs1zrFZPZe_UfWn-ZEZRZfxx5j_tk6WBzzmo-WetMAdDZuf0xNppYOkv1i2TIGWL0MYXnHQDxKj4m6xQ"/>
+</div>
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none z-20">
+<button class="opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 ease-out bg-surface text-on-surface border border-wireframe-stroke px-8 py-3 font-technical-data text-label-caps uppercase tracking-widest group-hover:border-blueprint-cyan group-hover:text-blueprint-cyan group-hover:shadow-[0_0_15px_rgba(0,240,255,0.2)] pointer-events-auto">
+VER PROJETO
+</button>
+</div>
+</div>
+<div class="flex flex-col gap-2 relative z-10 pt-2">
+<h3 class="font-technical-data text-technical-data uppercase text-on-surface tracking-wide">ENGRENAGEM AEROESPACIAL</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed opacity-80">Corte Laser; Soldadura de alta tolerância.</p>
+</div>
+</div>
 
-    <!-- Cookie Consent -->
-    <div class="cookie-banner" id="cookieBanner">
-        <div class="cookie-content">
-            <p>Utilizamos cookies para melhorar a sua experiência. Ao continuar a navegar, concorda com a nossa <a href="#">política de cookies</a>.</p>
-            <div class="cookie-actions">
-                <button class="btn btn-sm btn-outline" id="cookieReject">Rejeitar</button>
-                <button class="btn btn-sm btn-primary" id="cookieAccept">Aceitar</button>
-            </div>
-        </div>
-    </div>
+<!-- Card 4 -->
+<div class="project-card opacity-0 translate-y-8 transform transition-all duration-700 ease-out group relative bg-surface border border-wireframe-stroke p-4 flex flex-col gap-4 cursor-pointer hover:border-blueprint-cyan/50 hover:bg-surface-container-high corner-brackets">
+<div class="corner-brackets-inner h-full w-full absolute inset-0 pointer-events-none"></div>
+<div class="relative w-full aspect-[4/3] bg-metallic-charcoal overflow-hidden border border-wireframe-stroke">
+<img alt="Vigas Estruturais" class="w-full h-full object-cover transition-all duration-700 ease-in-out group-hover:opacity-0 group-hover:scale-105 grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCikE2nYMAvAAKm69gWOzYirN9UDVcgFq1z1DcOaK28DxhyZJnhuj-QC72UrVKsH2yMpPI6BQ_B2JYYsBRBJeNsXrHrtID29zBsk4oPZpIDSpj1RNy0VF-bcYiLiYWTSXmSsVuAfriwxxD_GmRjdEStqSch6Sk1faomxxHy4R4Tu3XBh9xWiEA2-yQY2gPjXcsUu-phhCeWfnCVS650PHwNVscaZ2vfiqCvHEX035IZn9bgWVUy9ESPUSvFuy8gPsS8tQC0cxBUKw"/>
+<div class="absolute inset-0 bg-metallic-charcoal flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-in-out">
+<img alt="Wireframe Vigas" class="w-full h-full object-cover opacity-60 mix-blend-screen invert contrast-150 transform scale-100 group-hover:scale-105 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3tvR1tk_-Fnw5_TuUo0VcR4IT8XzEntrdm6Q5f8fUxJwCabscmwli2PltGfM0_Wp9PjOedTDaZKpMBU1Q9AGm_tJHc48tEBq-dcRb8LwhZ9c3QkXwk3OTjAMOX1wnGYPOhZa65Y6keHPk9I3ZJ4ZoW1ypJhbnVkiXgQF3zTn3KisIsfp4NH2Nei24iiJlxNSa3FBMNReKgz6Cz92Iicqc3LDamk0IJR2reUVb3ynV0VPOIf1JslId5oiLIMCS3C2u2BjzR6BK9A"/>
+</div>
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none z-20">
+<button class="opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 ease-out bg-surface text-on-surface border border-wireframe-stroke px-8 py-3 font-technical-data text-label-caps uppercase tracking-widest group-hover:border-blueprint-cyan group-hover:text-blueprint-cyan group-hover:shadow-[0_0_15px_rgba(0,240,255,0.2)] pointer-events-auto">
+VER PROJETO
+</button>
+</div>
+</div>
+<div class="flex flex-col gap-2 relative z-10 pt-2">
+<h3 class="font-technical-data text-technical-data uppercase text-on-surface tracking-wide">VIGAS ESTRUTURAIS</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed opacity-80">Sistemas de enquadramento comercial de grande escala.</p>
+</div>
+</div>
 
-    <!-- AI Chatbot -->
-    <div class="chatbot" id="chatbot">
-        <button class="chatbot-toggle" id="chatbotToggle" aria-label="Assistente Virtual">
-            <svg class="chatbot-icon-open" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
-            <svg class="chatbot-icon-close" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
-            <span class="chatbot-badge">1</span>
-        </button>
-        <div class="chatbot-window" id="chatbotWindow">
-            <div class="chatbot-header">
-                <div class="chatbot-header-info">
-                    <div class="chatbot-avatar"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="5" r="4"/><circle cx="9" cy="15" r="1" fill="currentColor"/><circle cx="15" cy="15" r="1" fill="currentColor"/><path d="M9 18h6"/></svg></div>
-                    <div><span class="chatbot-name">Assistente Vicometal</span><span class="chatbot-status">Online — Resposta imediata</span></div>
-                </div>
-                <button class="chatbot-close" id="chatbotClose" aria-label="Fechar"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
-            </div>
-            <div class="chatbot-messages" id="chatbotMessages"><div class="chat-message bot"><div class="chat-bubble"><p>Olá! 👋 Sou o assistente virtual da Vicometal.</p><p>Posso ajudá-lo com informações sobre os nossos serviços, capacidades, orçamentos ou qualquer outra questão.</p><p>Como posso ajudar?</p></div></div></div>
-            <div class="chatbot-suggestions" id="chatbotSuggestions">
-                <button class="suggestion-btn" data-question="Que serviços oferecem?">Serviços</button>
-                <button class="suggestion-btn" data-question="Como posso pedir um orçamento?">Orçamento</button>
-                <button class="suggestion-btn" data-question="Onde estão localizados?">Localização</button>
-                <button class="suggestion-btn" data-question="Quais as vossas certificações?">Certificações</button>
-            </div>
-            <form class="chatbot-input" id="chatbotForm"><input type="text" id="chatbotInput" placeholder="Escreva a sua mensagem..." autocomplete="off"><button type="submit" aria-label="Enviar"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg></button></form>
-        </div>
-    </div>
+<!-- Card 5 -->
+<div class="project-card opacity-0 translate-y-8 transform transition-all duration-700 ease-out group relative bg-surface border border-wireframe-stroke p-4 flex flex-col gap-4 cursor-pointer hover:border-blueprint-cyan/50 hover:bg-surface-container-high corner-brackets">
+<div class="corner-brackets-inner h-full w-full absolute inset-0 pointer-events-none"></div>
+<div class="relative w-full aspect-[4/3] bg-metallic-charcoal overflow-hidden border border-wireframe-stroke">
+<img alt="Chassis Automóvel" class="w-full h-full object-cover transition-all duration-700 ease-in-out group-hover:opacity-0 group-hover:scale-105 grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTLCFEYh2vID9dcLmH_H8TQfbgVjkYQmKHicY2voE5uFbtk4ZW21B5JQFQtXNJ-F2r0GpwP-IeM5rDJYfWrS-bMSQcOSGAqs_jjIHC71SdgOruO51L3qI_WqTCfT5xiHdGWbjR81WDGgGJQmHNJFjuPaHRQqGGp31CGaSmrAXO9dj3f6J5DR6vb-pBCI16fv5CPcoNfKckwvwlXjvEwKyVQmfn8D5hUvFFkPJqg4mnCbPeG7wwUo14eCD-aqPQjmMevUGiVJvcNw"/>
+<div class="absolute inset-0 bg-metallic-charcoal flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-in-out">
+<img alt="Wireframe Chassis" class="w-full h-full object-cover opacity-60 mix-blend-screen invert contrast-150 transform scale-100 group-hover:scale-105 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWL4fjXVkITyrdxb2N4Z3_-lCxStUinyigwkTEWwkcI3zO2qcEUfdB0JLxAyhqMtQO4VEkpEBvh3euBGrFfZ7H8vOM1DybIXYE7Asbrg_n4JHneE0Va116kIB1HdIw3FPX9vAXK5CBunIrxfVZT0qWHh5tS04gv0JHpCgNNMtUn3bH_QzhfnsErzAVguffl8ZDWkqv1apYS_fCRZWMdEqkm2nWYxnT2ZYUSwxgTrw8tAO1dSJvroZwWX7f99Z6pNGoPZB6girbxg"/>
+</div>
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none z-20">
+<button class="opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 ease-out bg-surface text-on-surface border border-wireframe-stroke px-8 py-3 font-technical-data text-label-caps uppercase tracking-widest group-hover:border-blueprint-cyan group-hover:text-blueprint-cyan group-hover:shadow-[0_0_15px_rgba(0,240,255,0.2)] pointer-events-auto">
+VER PROJETO
+</button>
+</div>
+</div>
+<div class="flex flex-col gap-2 relative z-10 pt-2">
+<h3 class="font-technical-data text-technical-data uppercase text-on-surface tracking-wide">CHASSIS AUTOMÓVEL</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed opacity-80">Integração Digital Twin, Automação.</p>
+</div>
+</div>
 
-    <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+<!-- Card 6 -->
+<div class="project-card opacity-0 translate-y-8 transform transition-all duration-700 ease-out group relative bg-surface border border-wireframe-stroke p-4 flex flex-col gap-4 cursor-pointer hover:border-blueprint-cyan/50 hover:bg-surface-container-high corner-brackets">
+<div class="corner-brackets-inner h-full w-full absolute inset-0 pointer-events-none"></div>
+<div class="relative w-full aspect-[4/3] bg-metallic-charcoal overflow-hidden border border-wireframe-stroke">
+<img alt="Tubagem Industrial" class="w-full h-full object-cover transition-all duration-700 ease-in-out group-hover:opacity-0 group-hover:scale-105 grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDt41-nIwu8JJ0EwLSs1K5ih1DgNzih1ncksyROiLTd_2uumbycWeudzOM5bMBUkJONdlKiLOo22M4SjtXinRbkayE5BzGbIwcitECwvxneSm2UttG-zpkeCYOUOagq3LPCfuXOL69jQXjR2x72sCH5h-2k4TjppuM3OIBtNuZj1Cu4UPZRh9g_P0pC6R41TtTn2l2-LNJqcvk1-PMVOWWW5o5K3vEU2wXv50u30Gw87UrgE8OIvUgSnqPD5I6iQWbbDRtMRX9JEA"/>
+<div class="absolute inset-0 bg-metallic-charcoal flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-in-out">
+<img alt="Wireframe Tubagem" class="w-full h-full object-cover opacity-60 mix-blend-screen invert contrast-150 transform scale-100 group-hover:scale-105 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGDx23FHhe2KEWd4vMhh7A3wRH4Hv_qgP0yoRtS5EqbQRHCYtaPnIxeXA4vbjVERAS993jXlwLye0-rlJvY7StEES5-E86eiM-LBlbpMR9nCIGKUZFP4LY9xAFHAXgjcv06U2-y_SMzG2kdyVa0EDvbXfx3s9lUrWIznh3SuL8ARFUHoy3No6oVN9EzqIFPGjqXGgbDQs5B9-ROZ01lt2yXTR3U_RGLATdoU1xYqJA00c5ahLE6zrELElLXePwElFzPWlKppy8sw"/>
+</div>
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none z-20">
+<button class="opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 ease-out bg-surface text-on-surface border border-wireframe-stroke px-8 py-3 font-technical-data text-label-caps uppercase tracking-widest group-hover:border-blueprint-cyan group-hover:text-blueprint-cyan group-hover:shadow-[0_0_15px_rgba(0,240,255,0.2)] pointer-events-auto">
+VER PROJETO
+</button>
+</div>
+</div>
+<div class="flex flex-col gap-2 relative z-10 pt-2">
+<h3 class="font-technical-data text-technical-data uppercase text-on-surface tracking-wide">SISTEMA DE DINÂMICA DE FLUIDOS</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed opacity-80">Rede de válvulas e tubagem de alta pressão.</p>
+</div>
+</div>
+</div>
 
-    <script src="js/main.js"></script>
-    <script src="js/effects.js"></script>
-    <script src="js/chatbot.js"></script>
-    <script>
-    // Portfolio filter logic
-    document.addEventListener('DOMContentLoaded', function() {
-        const filterBtns = document.querySelectorAll('.filter-btn');
-        const cards = document.querySelectorAll('.portfolio-card');
-        
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                filterBtns.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                const filter = btn.dataset.filter;
-                cards.forEach(card => {
-                    if (filter === 'all' || card.dataset.category === filter) {
-                        card.style.display = '';
-                        card.style.animation = 'fadeUp 0.5s ease forwards';
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
-            });
+<!-- CTA Section -->
+<div class="mt-32 pt-16 border-t border-wireframe-stroke flex flex-col items-center justify-center text-center">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-8 tracking-tight">INICIE O SEU PROJETO CONNOSCO</h2>
+<a href="orcamento.html" class="bg-transparent border border-wireframe-stroke text-on-surface px-10 py-4 font-technical-data text-label-caps uppercase tracking-widest hover:border-blueprint-cyan hover:text-blueprint-cyan transition-all duration-300 hover:shadow-[0_0_20px_rgba(0,240,255,0.15)] relative overflow-hidden group inline-block no-underline">
+<span class="relative z-10">INICIAR PROJETO</span>
+<div class="absolute inset-0 bg-blueprint-cyan/5 transform scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out"></div>
+</a>
+</div>
+</main>
+
+<!-- Footer -->
+<footer class="relative bg-surface-container-lowest text-on-surface-variant font-technical-data text-technical-data w-full mt-24 px-margin py-margin mx-auto" id="main-footer">
+<div class="absolute top-0 left-0 w-full h-[1px] bg-wireframe-stroke transform scale-x-0 origin-left transition-transform duration-[1500ms] ease-[cubic-bezier(0.22,1,0.36,1)]" id="footer-border"></div>
+<div class="max-w-container-max mx-auto grid grid-cols-12 gap-gutter">
+<div class="col-span-12 md:col-span-6 flex flex-col gap-4">
+<span class="font-headline-md text-headline-md text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-blueprint-cyan">precision_manufacturing</span>
+VICOMETAL
+</span>
+<p class="text-on-tertiary-container mt-2">© 2024 GRUPO VICOMETAL. PRECISION FABRICATION SYSTEMS.</p>
+</div>
+<div class="col-span-12 md:col-span-6 flex flex-wrap gap-x-8 gap-y-4 md:justify-end items-end">
+<a class="text-on-tertiary-container hover:text-on-surface transition-colors" href="qualidade.html">ISO 9001:2015</a>
+<a class="text-on-tertiary-container hover:text-on-surface transition-colors" href="qualidade.html">ISO 14001</a>
+<a class="text-on-tertiary-container hover:text-on-surface transition-colors" href="#">Aviso Legal</a>
+<a class="text-on-tertiary-container hover:text-on-surface transition-colors" href="#">Política de Privacidade</a>
+<a class="text-on-tertiary-container hover:text-on-surface transition-colors" href="contactos.html">Contacto</a>
+</div>
+</div>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    // Grid Stagger Reveal
+    const cards = document.querySelectorAll('.project-card');
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting) {
+                entry.target.classList.remove('opacity-0', 'translate-y-8');
+                entry.target.classList.add('opacity-100', 'translate-y-0');
+                revealObserver.unobserve(entry.target);
+            }
         });
+    }, { threshold: 0.1 });
+
+    cards.forEach((card, index) => {
+        card.style.transitionDelay = `${index * 150}ms`;
+        revealObserver.observe(card);
     });
-    </script>
+
+    // Navigation Shrink
+    const header = document.getElementById('main-header');
+    window.addEventListener('scroll', () => {
+        if(window.scrollY > 50) {
+            header.querySelector('div').classList.remove('py-6');
+            header.querySelector('div').classList.add('py-3');
+        } else {
+            header.querySelector('div').classList.add('py-6');
+            header.querySelector('div').classList.remove('py-3');
+        }
+    });
+
+    // Parallax Background
+    window.addEventListener('scroll', () => {
+        document.body.style.backgroundPositionY = `${window.scrollY * 0.3}px`;
+    });
+
+    // Footer Line Draw
+    const footer = document.getElementById('main-footer');
+    const footerBorder = document.getElementById('footer-border');
+    const footerObserver = new IntersectionObserver((entries) => {
+        if(entries[0].isIntersecting) {
+            footerBorder.classList.remove('scale-x-0');
+            footerBorder.classList.add('scale-x-100');
+            footerObserver.unobserve(footer);
+        }
+    }, { threshold: 0.2 });
+    
+    footerObserver.observe(footer);
+});
+</script>
 </body>
 </html>

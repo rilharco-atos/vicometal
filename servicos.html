@@ -1,326 +1,485 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html class="dark" lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Serviços industriais Vicometal — Fabrico, montagem, manutenção, soldadura, inox e soluções chave-na-mão.">
-    <title>Serviços — Grupo Vicometal</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/effects.css">
-    <link rel="stylesheet" href="css/pages.css">
-    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta name="description" content="Serviços industriais Vicometal — Corte laser, quinagem CNC, soldadura avançada e soluções integradas de metalomecânica.">
+<title>VICOMETAL - Serviços</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            "colors": {
+                "on-secondary-fixed-variant": "#004f54",
+                "on-primary-fixed": "#1a1c1e",
+                "on-secondary-fixed": "#002022",
+                "surface-variant": "#323536",
+                "on-tertiary": "#2b3137",
+                "wireframe-stroke": "rgba(255, 255, 255, 0.1)",
+                "primary-fixed": "#e2e2e5",
+                "surface-tint": "#c6c6c9",
+                "on-secondary-container": "#00686f",
+                "secondary": "#d3fbff",
+                "on-secondary": "#00363a",
+                "metallic-charcoal": "#1A1D21",
+                "on-surface-variant": "#c5c6ca",
+                "tertiary-container": "#0b1116",
+                "surface-container-low": "#191c1d",
+                "on-tertiary-fixed-variant": "#41474e",
+                "primary-container": "#0f1113",
+                "on-background": "#e1e3e4",
+                "outline-variant": "#45474a",
+                "on-tertiary-container": "#777d84",
+                "inverse-on-surface": "#2e3132",
+                "on-surface": "#e1e3e4",
+                "outline": "#8f9194",
+                "secondary-container": "#00eefc",
+                "surface-container-highest": "#323536",
+                "primary-fixed-dim": "#c6c6c9",
+                "structural-gray": "#ADB5BD",
+                "primary": "#c6c6c9",
+                "surface-container": "#1d2021",
+                "on-primary": "#2f3133",
+                "surface": "#111415",
+                "secondary-fixed-dim": "#00dbe9",
+                "inverse-surface": "#e1e3e4",
+                "tertiary-fixed": "#dde3eb",
+                "surface-dim": "#111415",
+                "surface-container-high": "#282a2b",
+                "tertiary-fixed-dim": "#c1c7ce",
+                "on-primary-container": "#7b7d7f",
+                "secondary-fixed": "#7df4ff",
+                "on-error-container": "#ffdad6",
+                "on-primary-fixed-variant": "#454749",
+                "error-container": "#93000a",
+                "surface-container-lowest": "#0c0f10",
+                "tertiary": "#c1c7ce",
+                "error": "#ffb4ab",
+                "surface-bright": "#373a3b",
+                "on-error": "#690005",
+                "background": "#111415",
+                "on-tertiary-fixed": "#161c22",
+                "inverse-primary": "#5d5e61",
+                "blueprint-cyan": "#00F0FF"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "margin": "48px",
+                "unit": "4px",
+                "gutter": "24px",
+                "container-max": "1440px"
+            },
+            "fontFamily": {
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"],
+                "technical-data": ["JetBrains Mono"],
+                "label-caps": ["JetBrains Mono"],
+                "body-lg": ["Inter"]
+            },
+            "fontSize": {
+                "headline-lg": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "500" }],
+                "display-lg": ["72px", { "lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "700" }],
+                "technical-data": ["14px", { "lineHeight": "1.4", "fontWeight": "400" }],
+                "label-caps": ["12px", { "lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "500" }],
+                "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }]
+            }
+        }
+    }
+}
+</script>
+<style>
+.blueprint-grid {
+    background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 24px 24px;
+}
+
+.cyan-glow:hover, .cyan-glow:focus-within {
+    box-shadow: 0px 0px 8px rgba(0, 240, 255, 0.3);
+    border-color: #00F0FF;
+}
+
+.corner-bracket {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-color: #00F0FF;
+    transition: all 0.3s ease;
+    opacity: 0.5;
+}
+.group:hover .corner-bracket {
+    opacity: 1;
+}
+.bracket-tl { top: 0; left: 0; border-top-width: 1px; border-left-width: 1px; }
+.bracket-tr { top: 0; right: 0; border-top-width: 1px; border-right-width: 1px; }
+.bracket-bl { bottom: 0; left: 0; border-bottom-width: 1px; border-left-width: 1px; }
+.bracket-br { bottom: 0; right: 0; border-bottom-width: 1px; border-right-width: 1px; }
+
+@keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-50px); filter: blur(10px); }
+    to { opacity: 1; transform: translateX(0); filter: blur(0); }
+}
+@keyframes slideInRight {
+    from { opacity: 0; transform: translateX(50px); filter: blur(10px); }
+    to { opacity: 1; transform: translateX(0); filter: blur(0); }
+}
+
+.animate-slide-left {
+    animation: slideInLeft 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.animate-slide-right {
+    animation: slideInRight 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.service-card {
+    opacity: 0;
+}
+
+@keyframes scanLine {
+    0% { top: -10%; opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { top: 110%; opacity: 0; }
+}
+.scanner-line {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(0, 240, 255, 0.6), transparent);
+    box-shadow: 0 0 10px rgba(0, 240, 255, 0.8);
+    z-index: -1;
+    pointer-events: none;
+    animation: scanLine 8s linear infinite;
+}
+
+@keyframes glitch-anim {
+    0% { clip-path: inset(10% 0 80% 0); transform: translate(-2px, 2px); }
+    20% { clip-path: inset(80% 0 5% 0); transform: translate(2px, -2px); }
+    40% { clip-path: inset(50% 0 30% 0); transform: translate(-2px, -2px); }
+    60% { clip-path: inset(30% 0 60% 0); transform: translate(2px, 2px); }
+    80% { clip-path: inset(70% 0 10% 0); transform: translate(-2px, 2px); }
+    100% { clip-path: inset(20% 0 70% 0); transform: translate(2px, -2px); }
+}
+
+.glitch-btn {
+    position: relative;
+}
+
+.glitch-btn:hover::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #1A1D21;
+    color: #00F0FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: glitch-anim 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+    z-index: 20;
+    pointer-events: none;
+    font-family: 'JetBrains Mono', monospace;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    border: 1px solid #00F0FF;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none !important;
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.3), inset 0 0 8px rgba(0, 240, 255, 0.1) !important;
+    border-color: #00F0FF !important;
+    transition: all 0.3s ease;
+}
+
+.typewriter-text {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid transparent;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+@keyframes blink {
+    from, to { border-color: transparent; }
+    50% { border-color: #00F0FF; }
+}
+
+.animate-typewriter {
+    animation: typing 1.5s steps(30, end) forwards, blink 0.75s step-end infinite;
+}
+</style>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 </head>
-<body>
-    <!-- Navigation -->
-    <header id="navbar" class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="nav-logo">
-                <img src="assets/vicometal-logo.svg" alt="Vicometal — Grupo Industrial" class="logo-img" />
-            </a>
-            <nav class="nav-menu" id="navMenu">
-                <a href="index.html" class="nav-link">Início</a>
-                <a href="quem-somos.html" class="nav-link">Quem Somos</a>
-                <a href="capacidades.html" class="nav-link">Capacidades</a>
-                <a href="portfolio.html" class="nav-link">Portfólio</a>
-                <a href="servicos.html" class="nav-link active">Serviços</a>
-                <a href="qualidade.html" class="nav-link">Qualidade</a>
-                <a href="contactos.html" class="nav-link">Contactos</a>
-                <a href="orcamento.html" class="nav-link nav-cta">Solicitar Orçamento</a>
-            </nav>
-            <button class="nav-toggle" id="navToggle" aria-label="Menu">
-                <span></span><span></span><span></span>
-            </button>
-        </div>
-    </header>
+<body class="bg-background text-on-surface font-body-md blueprint-grid min-h-screen flex flex-col antialiased relative">
+<!-- Scanner Line -->
+<div class="scanner-line"></div>
 
-    <!-- Page Hero -->
-    <section class="page-hero">
-        <div class="page-hero-overlay"></div>
-        <div class="container">
-            <div class="page-hero-content fade-up">
-                <span class="page-hero-label">SOLUÇÕES</span>
-                <h1>Serviços</h1>
-                <p>Soluções integradas de metalomecânica — do projeto à entrega final.</p>
-            </div>
-        </div>
-    </section>
+<!-- Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-wireframe-stroke">
+<div class="flex justify-between items-center px-margin py-6 max-w-container-max mx-auto">
+<a href="index.html" class="font-headline-md text-headline-md text-on-surface tracking-tighter flex items-center gap-2 no-underline">
+<span class="material-symbols-outlined text-blueprint-cyan text-[32px]">precision_manufacturing</span>
+VICOMETAL
+</a>
+<div class="hidden md:flex items-center space-x-8 font-technical-data text-label-caps uppercase">
+<a class="text-on-surface-variant hover:text-blueprint-cyan transition-all duration-300" href="index.html">Início</a>
+<a class="text-blueprint-cyan border-b border-blueprint-cyan pb-1 transition-all duration-300" href="servicos.html">Serviços</a>
+<a class="text-on-surface-variant hover:text-blueprint-cyan transition-all duration-300" href="portfolio.html">Projetos</a>
+<a class="text-on-surface-variant hover:text-blueprint-cyan transition-all duration-300" href="quem-somos.html">Quem Somos</a>
+</div>
+<a class="hidden md:inline-flex items-center justify-center px-6 py-3 border border-wireframe-stroke bg-metallic-charcoal text-on-surface font-technical-data text-label-caps uppercase cyan-glow transition-all duration-300 group glitch-btn no-underline" data-text="Solicitar Orçamento →" href="orcamento.html">
+Solicitar Orçamento
+<span class="material-symbols-outlined ml-2 text-[16px] group-hover:text-blueprint-cyan transition-colors">arrow_forward</span>
+</a>
+<button class="md:hidden text-on-surface" aria-label="Menu">
+<span class="material-symbols-outlined text-[24px]">menu</span>
+</button>
+</div>
+</nav>
 
-    <!-- Fabrico -->
-    <section class="section service-section" id="fabrico">
-        <div class="container">
-            <div class="service-block fade-up">
-                <div class="service-block-header">
-                    <div class="service-number">01</div>
-                    <div>
-                        <h2>Fabrico</h2>
-                        <p class="service-tagline">Estruturas metálicas, caldeiraria pesada e equipamentos industriais</p>
-                    </div>
-                </div>
-                <div class="service-block-content">
-                    <p>A Vicometal fabrica todo o tipo de estruturas metálicas e equipamentos industriais, desde perfis simples a conjuntos de elevada complexidade técnica com tolerâncias apertadas.</p>
-                    <div class="service-capabilities">
-                        <div class="service-cap-item">
-                            <strong>Estruturas Metálicas</strong>
-                            <span>Naves industriais, passadiços, plataformas, torres, silos</span>
-                        </div>
-                        <div class="service-cap-item">
-                            <strong>Caldeiraria Pesada</strong>
-                            <span>Reservatórios, condutas, ciclones, permutadores, chaminés</span>
-                        </div>
-                        <div class="service-cap-item">
-                            <strong>Equipamentos</strong>
-                            <span>Transportadores, tremonhas, filtros de mangas, britadores</span>
-                        </div>
-                        <div class="service-cap-item">
-                            <strong>Capacidade</strong>
-                            <span>Até 3.000 ton/mês · Peças até 60 ton unitárias</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- Main Content -->
+<main class="flex-grow pt-32 pb-24 px-margin max-w-container-max mx-auto w-full">
+<!-- Hero Header -->
+<header class="mb-24 relative">
+<div class="absolute left-0 top-4 w-12 h-[1px] bg-blueprint-cyan"></div>
+<h1 class="font-display-lg text-display-lg text-on-surface mb-6 ml-16">FABRICAÇÃO<br/><span class="text-on-surface-variant">DE PRECISÃO</span></h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl ml-16">
+Soluções avançadas de metalomecânica concebidas para integridade estrutural e minimalismo arquitectónico. Processamento CNC de alta tolerância e montagem robótica certificada.
+</p>
+</header>
 
-    <!-- Montagem -->
-    <section class="section section-dark service-section" id="montagem">
-        <div class="container">
-            <div class="service-block fade-up">
-                <div class="service-block-header">
-                    <div class="service-number">02</div>
-                    <div>
-                        <h2>Montagem</h2>
-                        <p class="service-tagline">Montagem de equipamentos e estruturas em obra</p>
-                    </div>
-                </div>
-                <div class="service-block-content">
-                    <p>Equipas experientes de montagem em obra, com capacidade para operar em ambientes industriais exigentes — centrais, minas, cimenteiras e refinarias.</p>
-                    <div class="service-capabilities">
-                        <div class="service-cap-item">
-                            <strong>Centrais</strong>
-                            <span>Centrais de britagem, asfalto, betão e biomassa</span>
-                        </div>
-                        <div class="service-cap-item">
-                            <strong>Industrial</strong>
-                            <span>Montagem de equipamentos mecânicos, tubagem, conveyors</span>
-                        </div>
-                        <div class="service-cap-item">
-                            <strong>Estrutural</strong>
-                            <span>Montagem de estruturas metálicas com grua até 500 ton</span>
-                        </div>
-                        <div class="service-cap-item">
-                            <strong>Internacional</strong>
-                            <span>Equipas deslocadas em Portugal, Espanha, França, Marrocos, Angola</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- Services Grid -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-gutter mb-32 relative">
+<div class="hidden md:block absolute top-1/2 left-[-48px] right-[-48px] h-[1px] bg-wireframe-stroke -z-10"></div>
 
-    <!-- Manutenção -->
-    <section class="section service-section" id="manutencao">
-        <div class="container">
-            <div class="service-block fade-up">
-                <div class="service-block-header">
-                    <div class="service-number">03</div>
-                    <div>
-                        <h2>Manutenção Industrial</h2>
-                        <p class="service-tagline">Manutenção preventiva, corretiva e paragens programadas</p>
-                    </div>
-                </div>
-                <div class="service-block-content">
-                    <p>Equipas especializadas disponíveis 24/7 para manutenção em contínuo ou paragens programadas nos sectores mais exigentes da indústria pesada.</p>
-                    <div class="service-capabilities">
-                        <div class="service-cap-item">
-                            <strong>Celuloses</strong>
-                            <span>Manutenção em caldeiras de recuperação, evaporadores, digestores</span>
-                        </div>
-                        <div class="service-cap-item">
-                            <strong>Cimenteiras</strong>
-                            <span>Reparação de fornos, ciclones, tremonhas, filtros de mangas</span>
-                        </div>
-                        <div class="service-cap-item">
-                            <strong>Siderurgias</strong>
-                            <span>Manutenção de convertidores, lingoteiras, sistemas de vazamento</span>
-                        </div>
-                        <div class="service-cap-item">
-                            <strong>Minas & Pedreiras</strong>
-                            <span>Reparação de britadores, tapetes, classificadores, peneiras</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- Service 1: Corte Laser -->
+<article class="service-card group relative border border-wireframe-stroke bg-metallic-charcoal p-6 flex flex-col h-full cyan-glow transition-all duration-500 hover:-translate-y-1" data-direction="left">
+<div class="corner-bracket bracket-tl"></div>
+<div class="corner-bracket bracket-tr"></div>
+<div class="corner-bracket bracket-bl"></div>
+<div class="corner-bracket bracket-br"></div>
+<div class="relative w-full aspect-square mb-6 overflow-hidden border border-wireframe-stroke bg-surface">
+<img alt="Corte Laser CNC" class="w-full h-full object-cover grayscale opacity-70 mix-blend-luminosity group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDo404txFLSEavPq4e0FuY8sZEVzVIReGnLoGOr4k7VntdU5upOL0fYEhni-hG8P75b1F4tmjyi92J_tcjEDwYyUd3ci5xdS1w9sFmVYZbsESqQSmoBLklXlRp00IRmXd26Hd3HXbHBnm2cs52ZuleomJQxZlTLb9v4vtbyi6LUBEfaaXp_2nLf1M6_jBxtui-dRHyUMSwcRsqgi0AYY97YPqwZDkQ53AVK6SM0ApYYG0IX-Sdyb3NJpidsWGbo1Q4hNKW8XEtZfw"/>
+<div class="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+<div class="absolute top-1/2 left-0 w-full h-[1px] bg-blueprint-cyan/30"></div>
+<div class="absolute left-1/2 top-0 w-[1px] h-full bg-blueprint-cyan/30"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 border border-blueprint-cyan rounded-full flex items-center justify-center">
+<div class="w-1 h-1 bg-blueprint-cyan rounded-full"></div>
+</div>
+<span class="absolute bottom-2 right-2 font-technical-data text-label-caps text-blueprint-cyan">SYS.LSR_01</span>
+</div>
+</div>
+<div class="mt-auto">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-2 uppercase tracking-tight">Corte Laser</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Corte laser CNC de alta precisão para geometrias complexas e tolerâncias rigorosas.</p>
+<div class="flex items-center text-blueprint-cyan font-technical-data text-label-caps uppercase group-hover:tracking-widest transition-all duration-300">
+<span>Ver Especificações</span>
+<span class="material-symbols-outlined ml-2 text-[14px]">chevron_right</span>
+</div>
+</div>
+</article>
 
-    <!-- Soldadura -->
-    <section class="section section-dark service-section" id="soldadura">
-        <div class="container">
-            <div class="service-block fade-up">
-                <div class="service-block-header">
-                    <div class="service-number">04</div>
-                    <div>
-                        <h2>Soldadura</h2>
-                        <p class="service-tagline">Soldadura certificada EN ISO 3834 — qualidade comprovada</p>
-                    </div>
-                </div>
-                <div class="service-block-content">
-                    <p>A soldadura é o coração da nossa atividade. Dispomos de processos manuais, semi-automáticos e robotizados com certificação segundo EN ISO 3834-2 (requisitos abrangentes de qualidade).</p>
-                    <div class="service-capabilities">
-                        <div class="service-cap-item">
-                            <strong>MIG/MAG Robotizada</strong>
-                            <span>Células robotizadas para produção em série e grandes espessuras</span>
-                        </div>
-                        <div class="service-cap-item">
-                            <strong>TIG</strong>
-                            <span>Soldadura de precisão em inox, alumínio e ligas especiais</span>
-                        </div>
-                        <div class="service-cap-item">
-                            <strong>Arco Submerso (SAW)</strong>
-                            <span>Juntas de grande espessura em aço carbono e baixa liga</span>
-                        </div>
-                        <div class="service-cap-item">
-                            <strong>Soldadores Certificados</strong>
-                            <span>EN ISO 9606-1 · Processos 135, 136, 138, 141, 111, 121</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- Service 2: Quinagem -->
+<article class="service-card group relative border border-wireframe-stroke bg-metallic-charcoal p-6 flex flex-col h-full cyan-glow transition-all duration-500 hover:-translate-y-1" data-direction="right" style="animation-delay: 0.2s;">
+<div class="corner-bracket bracket-tl"></div>
+<div class="corner-bracket bracket-tr"></div>
+<div class="corner-bracket bracket-bl"></div>
+<div class="corner-bracket bracket-br"></div>
+<div class="relative w-full aspect-square mb-6 overflow-hidden border border-wireframe-stroke bg-surface">
+<img alt="Quinagem Robótica" class="w-full h-full object-cover grayscale opacity-70 mix-blend-luminosity group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOtl16taOs_cINLEUBOYHLknVIFd1nS2eyD7UdRckCLxCdZjY7p3as8kUokg94WxbOR6fXn4PSh7C2x9hM-pLOGfVhDKrEHMCqbSOAQ4UWnZD7fWdRbNmNWlOVdhg44Y4jp-4AzRGU7ZRpRHdHazi0pKQfISzw9-N9xtj9rgpzgr1mxawoCM37sm_Uh33zytl7r5iaLaK_iGoPXQW_JwX22W0oIggRUZhRUiYm3BjRtQrWxiuVcKm1Z-TG6SBzcANY8n7bomDZhA"/>
+<div class="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+<svg class="absolute inset-0 w-full h-full" preserveAspectRatio="none" viewBox="0 0 100 100">
+<path d="M20,80 L50,40 L80,80" fill="none" stroke="#00F0FF" stroke-dasharray="2,2" stroke-width="0.5"></path>
+<circle cx="50" cy="40" fill="none" r="2" stroke="#00F0FF" stroke-width="1"></circle>
+</svg>
+<span class="absolute top-4 left-4 font-technical-data text-label-caps text-blueprint-cyan bg-background/50 px-2">ANG: 45.00°</span>
+</div>
+</div>
+<div class="mt-auto">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-2 uppercase tracking-tight">Quinagem</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Dobragem robótica de precisão garantindo consistência estrutural em componentes pesados.</p>
+<div class="flex items-center text-blueprint-cyan font-technical-data text-label-caps uppercase group-hover:tracking-widest transition-all duration-300">
+<span>Ver Especificações</span>
+<span class="material-symbols-outlined ml-2 text-[14px]">chevron_right</span>
+</div>
+</div>
+</article>
 
-    <!-- Inox -->
-    <section class="section service-section" id="inox">
-        <div class="container">
-            <div class="service-block fade-up">
-                <div class="service-block-header">
-                    <div class="service-number">05</div>
-                    <div>
-                        <h2>Inox — Vicoinox</h2>
-                        <p class="service-tagline">Soluções em aço inoxidável para indústrias exigentes</p>
-                    </div>
-                </div>
-                <div class="service-block-content">
-                    <p>Através da Vicoinox, S.A., oferecemos fabrico especializado em aço inoxidável para os sectores alimentar, farmacêutico, químico e de águas, com acabamentos de elevada qualidade.</p>
-                    <div class="service-capabilities">
-                        <div class="service-cap-item">
-                            <strong>Tanques & Reservatórios</strong>
-                            <span>AISI 304 / 316L · Polimento mecânico e eletrolítico</span>
-                        </div>
-                        <div class="service-cap-item">
-                            <strong>Tubagem de Processo</strong>
-                            <span>Soldadura orbital TIG · Qualificação para farmacêutica</span>
-                        </div>
-                        <div class="service-cap-item">
-                            <strong>Equipamentos</strong>
-                            <span>Misturadores, reatores, permutadores, filtros</span>
-                        </div>
-                        <div class="service-cap-item">
-                            <strong>Certificações</strong>
-                            <span>EN ISO 3834 · PED 2014/68/EU · ASME (em processo)</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- Service 3: Soldadura -->
+<article class="service-card group relative border border-wireframe-stroke bg-metallic-charcoal p-6 flex flex-col h-full cyan-glow transition-all duration-500 hover:-translate-y-1" data-direction="left" style="animation-delay: 0.4s;">
+<div class="corner-bracket bracket-tl"></div>
+<div class="corner-bracket bracket-tr"></div>
+<div class="corner-bracket bracket-bl"></div>
+<div class="corner-bracket bracket-br"></div>
+<div class="relative w-full aspect-square mb-6 overflow-hidden border border-wireframe-stroke bg-surface">
+<img alt="Soldadura Industrial Certificada" class="w-full h-full object-cover grayscale opacity-70 mix-blend-luminosity group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPR400eezQHU55LDIPVxNJ6AW3DE-4uxY8cPEXKozTDE8bmrvBPZHigW_vI-sj8RsK4z9NO3B0HV1jAnJdg3Ru_SfQnigcMh9vSILuCfGRrYdn2Lp04oTWnDGJrfKSem8divXlahTnpC9Mr4OPTeDwMwvwv_umFe5kNLOTLgOtVVf78OmUrrvZbw4UM5WWJ26ydNwtqLAx8Xk0xXrhDwdmFJS3k7SaWyCgFrBohzDYcfkvodUzmHcHOJQacKl5tRoBeLzM0mMe9A"/>
+<div class="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+<div class="relative w-24 h-24">
+<div class="absolute inset-0 border border-blueprint-cyan rounded-full animate-[spin_10s_linear_infinite] border-t-transparent"></div>
+<div class="absolute inset-2 border border-blueprint-cyan/50 rounded-full animate-[spin_15s_linear_infinite_reverse] border-b-transparent"></div>
+<div class="absolute inset-0 flex items-center justify-center text-blueprint-cyan">
+<span class="material-symbols-outlined text-[20px]">precision_manufacturing</span>
+</div>
+</div>
+<div class="absolute right-0 top-1/2 w-12 h-[1px] bg-blueprint-cyan"></div>
+<span class="absolute right-2 top-1/2 -translate-y-6 font-technical-data text-label-caps text-blueprint-cyan">WELD.03</span>
+</div>
+</div>
+<div class="mt-auto">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-2 uppercase tracking-tight">Soldadura</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Soluções de soldadura certificada executando montagens complexas com resistência à tração máxima.</p>
+<div class="flex items-center text-blueprint-cyan font-technical-data text-label-caps uppercase group-hover:tracking-widest transition-all duration-300">
+<span>Ver Especificações</span>
+<span class="material-symbols-outlined ml-2 text-[14px]">chevron_right</span>
+</div>
+</div>
+</article>
+</section>
 
-    <!-- Chave-na-Mão -->
-    <section class="section section-dark service-section" id="chave-na-mao">
-        <div class="container">
-            <div class="service-block fade-up">
-                <div class="service-block-header">
-                    <div class="service-number">06</div>
-                    <div>
-                        <h2>Soluções Chave-na-Mão</h2>
-                        <p class="service-tagline">Do design à entrega com comissionamento</p>
-                    </div>
-                </div>
-                <div class="service-block-content">
-                    <p>Para projetos que exigem um parceiro único e integrador, oferecemos soluções chave-na-mão: engenharia, procurement, fabrico, transporte, montagem e comissionamento.</p>
-                    <div class="service-capabilities">
-                        <div class="service-cap-item">
-                            <strong>EPC</strong>
-                            <span>Engineering, Procurement & Construction integrado</span>
-                        </div>
-                        <div class="service-cap-item">
-                            <strong>Gestão de Projeto</strong>
-                            <span>Planeamento, coordenação de subcontratados, Quality Assurance</span>
-                        </div>
-                        <div class="service-cap-item">
-                            <strong>Logística</strong>
-                            <span>Transporte especial de cargas pesadas e volumosas, despacho aduaneiro</span>
-                        </div>
-                        <div class="service-cap-item">
-                            <strong>Comissionamento</strong>
-                            <span>Testes funcionais, arranque assistido, formação de operadores</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- Request Quote Form -->
+<section class="max-w-3xl mx-auto bg-surface-container-low border border-wireframe-stroke p-8 md:p-12 relative overflow-hidden" id="quote-section">
+<div class="absolute top-0 right-0 w-32 h-32 bg-blueprint-cyan/5 blur-3xl rounded-full"></div>
+<div class="absolute top-0 right-0 w-8 h-8 border-t border-r border-wireframe-stroke m-4"></div>
+<div class="absolute bottom-0 left-0 w-8 h-8 border-b border-l border-wireframe-stroke m-4"></div>
 
-    <!-- CTA -->
-    <section class="section">
-        <div class="container">
-            <div class="cta-block fade-up" style="text-align:center; max-width:700px; margin:0 auto;">
-                <h2 class="section-title">Tem um projeto em mente?</h2>
-                <p style="color:var(--text-secondary); margin-bottom:2rem;">Solicite um orçamento sem compromisso. Respondemos em menos de 24 horas.</p>
-                <a href="orcamento.html" class="btn btn-primary">Solicitar Orçamento</a>
-            </div>
-        </div>
-    </section>
+<div class="mb-10 text-center relative z-10">
+<span class="font-technical-data text-label-caps text-blueprint-cyan block mb-4 tracking-[0.2em] uppercase">
+<span class="typewriter-text" data-text="Iniciar Sequência">Iniciar Sequência</span>
+</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface uppercase tracking-tighter">Solicitar Orçamento</h2>
+</div>
 
-    <!-- Footer -->
-    <footer class="footer" id="footer">
-        <div class="footer-top">
-            <div class="container">
-                <div class="footer-grid">
-                    <div class="footer-brand">
-                        <a href="index.html" class="footer-logo"><img src="assets/vicometal-logo.svg" alt="Vicometal" class="logo-img" /></a>
-                        <p class="footer-desc">Desde 2001 a fornecer soluções de engenharia e metalomecânica para os mais exigentes projetos industriais em 4 continentes.</p>
-                        <div class="footer-social">
-                            <a href="https://www.facebook.com/grupovicometal/?locale=pt_PT" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
-                            <a href="https://www.linkedin.com/in/grupo-vicometal-bb8061235" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 6a2 2 0 100-4 2 2 0 000 4z"/></svg></a>
-                            <a href="https://www.instagram.com/vicometal" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg></a>
-                        </div>
-                    </div>
-                    <div class="footer-nav"><h4>Navegação</h4><ul><li><a href="quem-somos.html">Quem Somos</a></li><li><a href="capacidades.html">Capacidades</a></li><li><a href="portfolio.html">Portfólio</a></li><li><a href="servicos.html">Serviços</a></li><li><a href="qualidade.html">Qualidade</a></li><li><a href="contactos.html">Contactos</a></li><li><a href="engenharia-digital.html">Engenharia Digital</a></li><li><a href="sustentabilidade.html">Sustentabilidade</a></li><li><a href="carreiras.html">Carreiras</a></li><li><a href="portal-cliente.html">Portal Cliente</a></li><li><a href="tour-virtual.html">Tour Virtual</a></li></ul></div>
-                    <div class="footer-nav"><h4>Serviços</h4><ul><li><a href="servicos.html#fabrico">Fabrico</a></li><li><a href="servicos.html#montagem">Montagem</a></li><li><a href="servicos.html#manutencao">Manutenção Industrial</a></li><li><a href="servicos.html#soldadura">Soldadura</a></li><li><a href="servicos.html#inox">Inox & Vicoinox</a></li><li><a href="servicos.html#chave-na-mao">Chave-na-Mão</a></li></ul></div>
-                    <div class="footer-contact"><h4>Contactos</h4><ul class="contact-list"><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Barroco, 3130-400<br>Vila Nova de Anços · Soure</span></li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg><a href="tel:+351239644616">(+351) 239 644 616</a></li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg><a href="mailto:vicometal@vicometal.pt">vicometal@vicometal.pt</a></li></ul></div>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom"><div class="container"><div class="footer-bottom-content"><p>&copy; 2026 Vicometal — Vieira Cordeiro, S.A. · Todos os direitos reservados.</p><div class="footer-links"><a href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener" class="footer-complaints"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg> Livro de Reclamações</a><a href="#">Política de Privacidade</a><a href="#">Termos de Utilização</a></div></div></div></div>
-        <div class="footer-credit">
-            <span>Desenvolvido por</span>
-            <a href="https://atos.net" target="_blank" rel="noopener"><img src="assets/atos-logo.png" alt="Atos" class="footer-credit-logo" /></a>
-        </div>
-    </footer>
+<form class="space-y-8 relative z-10" action="#" method="POST">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="relative group">
+<label class="font-technical-data text-label-caps text-on-surface-variant mb-2 block uppercase" for="name"><span class="typewriter-text">Entidade / Nome</span></label>
+<input class="w-full bg-transparent border-0 border-b border-wireframe-stroke focus:ring-0 text-on-surface font-body-md py-2 px-0 transition-all placeholder-on-tertiary-container" id="name" name="name" placeholder="ex. Escritório de Arquitectura" type="text"/>
+</div>
+<div class="relative group">
+<label class="font-technical-data text-label-caps text-on-surface-variant mb-2 block uppercase" for="email"><span class="typewriter-text">Email</span></label>
+<input class="w-full bg-transparent border-0 border-b border-wireframe-stroke focus:ring-0 text-on-surface font-body-md py-2 px-0 transition-all placeholder-on-tertiary-container" id="email" name="email" placeholder="contacto@empresa.com" type="email"/>
+</div>
+</div>
+<div class="relative group">
+<label class="font-technical-data text-label-caps text-on-surface-variant mb-2 block uppercase" for="service"><span class="typewriter-text">Serviço Pretendido</span></label>
+<select class="w-full bg-surface-container-low border-0 border-b border-wireframe-stroke focus:ring-0 text-on-surface font-body-md py-2 px-0 transition-all appearance-none" id="service" name="service">
+<option class="text-on-tertiary-container" disabled="" selected="" value="">Selecionar Serviço...</option>
+<option value="laser">Corte Laser</option>
+<option value="quinagem">Quinagem</option>
+<option value="soldadura">Soldadura</option>
+<option value="multiple">Múltiplos / Montagem Integrada</option>
+</select>
+<div class="absolute right-0 top-10 pointer-events-none text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">arrow_drop_down</span>
+</div>
+</div>
+<div class="relative group">
+<label class="font-technical-data text-label-caps text-on-surface-variant mb-2 block uppercase" for="details"><span class="typewriter-text">Especificações Técnicas / Detalhes do Projeto</span></label>
+<textarea class="w-full bg-transparent border border-wireframe-stroke focus:ring-0 text-on-surface font-body-md p-4 transition-all resize-none placeholder-on-tertiary-container" id="details" name="details" placeholder="Indique tipos de material, tolerâncias e volume estimado..." rows="4"></textarea>
+</div>
+<div class="pt-4 flex justify-end">
+<button class="group relative px-8 py-4 bg-metallic-charcoal border border-blueprint-cyan text-blueprint-cyan font-technical-data text-label-caps uppercase tracking-widest overflow-hidden transition-colors duration-300 glitch-btn" data-text="Enviar Dados →" type="submit">
+<div class="absolute inset-0 bg-blueprint-cyan -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out z-0"></div>
+<span class="relative z-10 flex items-center group-hover:text-surface transition-colors">
+Enviar Dados
+<span class="material-symbols-outlined ml-2 text-[16px]">send</span>
+</span>
+</button>
+</div>
+</form>
+</section>
+</main>
 
-    <!-- Cookie Consent -->
-    <div class="cookie-banner" id="cookieBanner"><div class="cookie-content"><p>Utilizamos cookies para melhorar a sua experiência. Ao continuar a navegar, concorda com a nossa <a href="#">política de cookies</a>.</p><div class="cookie-actions"><button class="btn btn-sm btn-outline" id="cookieReject">Rejeitar</button><button class="btn btn-sm btn-primary" id="cookieAccept">Aceitar</button></div></div></div>
+<!-- Footer -->
+<footer class="w-full mt-24 bg-surface-container-lowest border-t border-wireframe-stroke">
+<div class="grid grid-cols-12 gap-gutter px-margin py-margin max-w-container-max mx-auto">
+<div class="col-span-12 md:col-span-4 mb-8 md:mb-0">
+<span class="font-headline-md text-headline-md text-on-surface block mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-blueprint-cyan">precision_manufacturing</span>
+VICOMETAL
+</span>
+<p class="font-technical-data text-technical-data text-on-surface-variant max-w-xs">
+© 2024 GRUPO VICOMETAL. PRECISION FABRICATION SYSTEMS.
+</p>
+</div>
+<div class="col-span-12 md:col-span-8 flex flex-wrap gap-8 md:justify-end items-end font-technical-data text-technical-data">
+<a class="text-on-tertiary-container hover:text-on-surface transition-colors" href="qualidade.html">ISO 9001:2015</a>
+<a class="text-on-tertiary-container hover:text-on-surface transition-colors" href="qualidade.html">ISO 14001</a>
+<a class="text-on-tertiary-container hover:text-on-surface transition-colors" href="#">Aviso Legal</a>
+<a class="text-on-tertiary-container hover:text-on-surface transition-colors" href="#">Política de Privacidade</a>
+<a class="text-on-tertiary-container hover:text-on-surface transition-colors" href="contactos.html">Contacto</a>
+</div>
+</div>
+</footer>
 
-    <!-- AI Chatbot -->
-    <div class="chatbot" id="chatbot">
-        <button class="chatbot-toggle" id="chatbotToggle" aria-label="Assistente Virtual"><svg class="chatbot-icon-open" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg><svg class="chatbot-icon-close" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg><span class="chatbot-badge">1</span></button>
-        <div class="chatbot-window" id="chatbotWindow">
-            <div class="chatbot-header"><div class="chatbot-header-info"><div class="chatbot-avatar"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="5" r="4"/><circle cx="9" cy="15" r="1" fill="currentColor"/><circle cx="15" cy="15" r="1" fill="currentColor"/><path d="M9 18h6"/></svg></div><div><span class="chatbot-name">Assistente Vicometal</span><span class="chatbot-status">Online — Resposta imediata</span></div></div><button class="chatbot-close" id="chatbotClose" aria-label="Fechar"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg></button></div>
-            <div class="chatbot-messages" id="chatbotMessages"><div class="chat-message bot"><div class="chat-bubble"><p>Olá! 👋 Sou o assistente virtual da Vicometal.</p><p>Posso ajudá-lo com informações sobre os nossos serviços, capacidades, orçamentos ou qualquer outra questão.</p><p>Como posso ajudar?</p></div></div></div>
-            <div class="chatbot-suggestions" id="chatbotSuggestions"><button class="suggestion-btn" data-question="Que serviços oferecem?">Serviços</button><button class="suggestion-btn" data-question="Como posso pedir um orçamento?">Orçamento</button><button class="suggestion-btn" data-question="Onde estão localizados?">Localização</button><button class="suggestion-btn" data-question="Quais as vossas certificações?">Certificações</button></div>
-            <form class="chatbot-input" id="chatbotForm"><input type="text" id="chatbotInput" placeholder="Escreva a sua mensagem..." autocomplete="off"><button type="submit" aria-label="Enviar"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg></button></form>
-        </div>
-    </div>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    // Intersection Observer for Slide-in Entrance
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px"
+    };
 
-    <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+    const serviceCards = document.querySelectorAll('.service-card');
+    const cardObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const el = entry.target;
+                const dir = el.getAttribute('data-direction');
+                if (dir === 'left') {
+                    el.classList.add('animate-slide-left');
+                } else {
+                    el.classList.add('animate-slide-right');
+                }
+                observer.unobserve(el);
+            }
+        });
+    }, observerOptions);
 
-    <script src="js/main.js"></script>
-    <script src="js/effects.js"></script>
-    <script src="js/chatbot.js"></script>
+    serviceCards.forEach(card => cardObserver.observe(card));
+
+    // Intersection Observer for Typewriter Effect
+    const typewriters = document.querySelectorAll('.typewriter-text');
+    
+    typewriters.forEach(tw => {
+        tw.style.width = '0';
+    });
+
+    const typeObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate-typewriter');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    typewriters.forEach(tw => typeObserver.observe(tw));
+});
+</script>
 </body>
 </html>

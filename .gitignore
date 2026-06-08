@@ -1,0 +1,7 @@
+node_modules
+.next
+.history
+.github
+.vscode
+*.tsbuildinfo
+next-env.d.ts
