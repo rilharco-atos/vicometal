@@ -3,6 +3,7 @@ const nextConfig = {
   output: 'export',
   basePath: '/vicometal',
   assetPrefix: '/vicometal/',
+  trailingSlash: true,
   images: {
     unoptimized: true,
   },
