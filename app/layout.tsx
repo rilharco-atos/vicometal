@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import HydrationGuard from '@/components/HydrationGuard'
 
 export const metadata: Metadata = {
   title: 'VICOMETAL — Engenharia de Precisão Industrial',
@@ -13,8 +14,9 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="pt" className="dark">
+    <html lang="pt" className="dark no-js" suppressHydrationWarning>
       <body className="min-h-screen overflow-x-hidden">
+        <HydrationGuard />
         {children}
       </body>
     </html>

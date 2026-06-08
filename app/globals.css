@@ -4,6 +4,15 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
 
+/* Prevent Flash of Invisible Content (FOIC) from Framer Motion SSR.
+   Before hydration, override inline opacity:0 so content is visible.
+   After hydration, HydrationGuard removes .no-js and FM takes over. */
+html.no-js [style*="opacity"] {
+  opacity: 1 !important;
+  transform: none !important;
+  filter: none !important;
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;

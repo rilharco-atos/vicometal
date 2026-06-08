@@ -2,9 +2,13 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import { useState, useEffect } from 'react'
 import HeroVisual from './HeroVisual'
 
 export default function Hero() {
+  const [mounted, setMounted] = useState(false)
+  useEffect(() => { setMounted(true) }, [])
+
   return (
     <section className="relative min-h-screen flex items-center pt-32 pb-24">
       <div className="max-w-[1440px] mx-auto px-6 md:px-margin w-full">
@@ -12,8 +16,8 @@ export default function Hero() {
           <div className="lg:col-span-8">
             {/* Status badge */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={false}
+              animate={mounted ? { opacity: 1, y: 0 } : { opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
               className="inline-flex items-center gap-3 mb-8 border border-wireframe-stroke px-4 py-2 bg-white/[0.02] backdrop-blur-sm"
             >
@@ -25,8 +29,8 @@ export default function Hero() {
 
             {/* Main headline */}
             <motion.h1
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={false}
+              animate={mounted ? { opacity: 1, y: 0 } : { opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
               className="font-display text-[clamp(48px,8vw,88px)] leading-[1.05] tracking-[-0.04em] font-bold text-on-surface uppercase mb-8"
             >
@@ -40,8 +44,8 @@ export default function Hero() {
 
             {/* Subtitle */}
             <motion.p
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={false}
+              animate={mounted ? { opacity: 1, y: 0 } : { opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
               className="font-body text-body-lg text-on-surface-variant max-w-xl mb-12"
             >
@@ -52,8 +56,8 @@ export default function Hero() {
 
             {/* CTAs */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={false}
+              animate={mounted ? { opacity: 1, y: 0 } : { opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.8, ease: [0.22, 1, 0.36, 1] }}
               className="flex flex-wrap gap-4"
             >
@@ -69,8 +73,8 @@ export default function Hero() {
           {/* Right decorative element */}
           <div className="hidden lg:flex lg:col-span-4 items-center justify-center relative">
             <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
+              initial={false}
+              animate={mounted ? { opacity: 1, scale: 1 } : { opacity: 1, scale: 1 }}
               transition={{ duration: 1.5, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
             >
               <HeroVisual />
@@ -80,8 +84,8 @@ export default function Hero() {
 
         {/* Bottom stats bar */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={false}
+          animate={mounted ? { opacity: 1, y: 0 } : { opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.2, ease: [0.22, 1, 0.36, 1] }}
           className="mt-24 pt-8 border-t border-wireframe-stroke grid grid-cols-2 md:grid-cols-4 gap-8"
         >
@@ -93,8 +97,8 @@ export default function Hero() {
           ].map((stat, i) => (
             <motion.div
               key={stat.label}
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={false}
+              animate={mounted ? { opacity: 1, y: 0 } : { opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1.4 + i * 0.1 }}
             >
               <div className="font-display text-[36px] font-bold text-blueprint-cyan text-glow mb-1">

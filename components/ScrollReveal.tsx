@@ -1,7 +1,7 @@
 'use client'
 
 import { motion, useInView } from 'framer-motion'
-import { useRef, ReactNode } from 'react'
+import { useRef, ReactNode, useState, useEffect } from 'react'
 
 interface ScrollRevealProps {
   children: ReactNode
@@ -20,6 +20,9 @@ export default function ScrollReveal({
 }: ScrollRevealProps) {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: '-80px' })
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => { setMounted(true) }, [])
 
   const directionMap = {
     up: { y: distance, x: 0 },
@@ -28,22 +31,20 @@ export default function ScrollReveal({
     right: { y: 0, x: -distance },
   }
 
-  const initial = {
+  const hidden = {
     opacity: 0,
     ...directionMap[direction],
     filter: 'blur(8px)',
   }
 
-  const animate = isInView
-    ? { opacity: 1, x: 0, y: 0, filter: 'blur(0px)' }
-    : initial
+  const visible = { opacity: 1, x: 0, y: 0, filter: 'blur(0px)' }
 
   return (
     <motion.div
       ref={ref}
       className={className}
-      initial={initial}
-      animate={animate}
+      initial={false}
+      animate={!mounted ? visible : isInView ? visible : hidden}
       transition={{
         duration: 0.9,
         delay,
