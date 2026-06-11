@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import HydrationGuard from '@/components/HydrationGuard'
+import AiChat from '@/components/AiChat'
 
 export const metadata: Metadata = {
   title: 'VICOMETAL — Engenharia de Precisão Industrial',
@@ -18,6 +19,7 @@ export default function RootLayout({
       <body className="min-h-screen overflow-x-hidden">
         <HydrationGuard />
         {children}
+        <AiChat />
       </body>
     </html>
   )
