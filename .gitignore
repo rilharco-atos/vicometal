@@ -7,8 +7,11 @@ out
 next-env.d.ts
 
 # Old static website files (migrated to Next.js)
-css/
-js/
-assets/
-uploads/
+/css/
+/js/
+/assets/
+/uploads/
+
+# Allow public assets (logos, images, etc.)
+!public/assets/
 staticwebapp.config.json
