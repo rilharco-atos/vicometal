@@ -16,7 +16,7 @@ const services = [
       { label: 'Área', value: '40.000 m²' },
     ],
     code: 'SRV.FAB_01',
-    image: '/uploads/destaques/ciclone-alemanha.jpg',
+    image: '/vicometal/uploads/destaques/ciclone-alemanha.jpg',
   },
   {
     title: 'Montagem',
@@ -28,7 +28,7 @@ const services = [
       { label: 'Equipas', value: 'Deslocadas' },
     ],
     code: 'SRV.MNT_02',
-    image: '/uploads/destaques/central-asfalto.jpg',
+    image: '/vicometal/uploads/destaques/central-asfalto.jpg',
   },
   {
     title: 'Manutenção Industrial',
@@ -40,7 +40,7 @@ const services = [
       { label: 'Sectores', value: '6+' },
     ],
     code: 'SRV.MAN_03',
-    image: '/uploads/destaques/evaporador-quench.jpg',
+    image: '/vicometal/uploads/destaques/evaporador-quench.jpg',
   },
   {
     title: 'Soldadura Especializada',
@@ -52,7 +52,7 @@ const services = [
       { label: 'Processos', value: '135/141/121' },
     ],
     code: 'SRV.WLD_04',
-    image: '/uploads/destaques/soldadura-mig-mag.jpg',
+    image: '/vicometal/uploads/destaques/soldadura-mig-mag.jpg',
   },
   {
     title: 'Inox — Vicoinox',
@@ -64,7 +64,7 @@ const services = [
       { label: 'Norm.', value: 'PED 2014/68' },
     ],
     code: 'SRV.INX_05',
-    image: '/uploads/destaques/transportadores-galeria.jpg',
+    image: '/vicometal/uploads/destaques/transportadores-galeria.jpg',
   },
   {
     title: 'Soluções Chave-na-Mão',
@@ -76,7 +76,7 @@ const services = [
       { label: 'Escala', value: 'Internacional' },
     ],
     code: 'SRV.TKY_06',
-    image: '/uploads/destaques/central-asfalto.jpg',
+    image: '/vicometal/uploads/destaques/central-asfalto.jpg',
   },
 ]
 
@@ -219,7 +219,7 @@ function QuoteForm() {
             </label>
             <input
               type="text"
-              className="w-full bg-transparent border-0 border-b border-wireframe-stroke text-on-surface font-body py-3 px-0 focus:outline-none focus:border-blueprint-cyan focus:shadow-[0_1px_0_0_#00F0FF] transition-all placeholder:text-on-tertiary-container"
+              className="w-full bg-transparent border-0 border-b border-wireframe-stroke text-on-surface font-body py-3 px-0 focus:outline-none focus:border-blueprint-cyan focus:shadow-[0_1px_0_0_#E5560E] transition-all placeholder:text-on-tertiary-container"
               placeholder="ex. Escritório de Arquitectura"
             />
           </div>
@@ -229,7 +229,7 @@ function QuoteForm() {
             </label>
             <input
               type="email"
-              className="w-full bg-transparent border-0 border-b border-wireframe-stroke text-on-surface font-body py-3 px-0 focus:outline-none focus:border-blueprint-cyan focus:shadow-[0_1px_0_0_#00F0FF] transition-all placeholder:text-on-tertiary-container"
+              className="w-full bg-transparent border-0 border-b border-wireframe-stroke text-on-surface font-body py-3 px-0 focus:outline-none focus:border-blueprint-cyan focus:shadow-[0_1px_0_0_#E5560E] transition-all placeholder:text-on-tertiary-container"
               placeholder="contacto@empresa.com"
             />
           </div>
@@ -254,7 +254,7 @@ function QuoteForm() {
           </label>
           <textarea
             rows={4}
-            className="w-full bg-white/[0.02] border border-wireframe-stroke text-on-surface font-body p-4 focus:outline-none focus:border-blueprint-cyan focus:shadow-[0_0_0_1px_rgba(0,240,255,0.3)] transition-all resize-none placeholder:text-on-tertiary-container"
+            className="w-full bg-white/[0.02] border border-wireframe-stroke text-on-surface font-body p-4 focus:outline-none focus:border-blueprint-cyan focus:shadow-[0_0_0_1px_rgba(229,86,14,0.3)] transition-all resize-none placeholder:text-on-tertiary-container"
             placeholder="Indique tipos de material, tolerâncias e volume estimado..."
           />
         </div>

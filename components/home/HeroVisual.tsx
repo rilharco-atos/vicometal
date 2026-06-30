@@ -32,14 +32,14 @@ export default function HeroVisual() {
       >
         <defs>
           <linearGradient id="vesselGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="#00F0FF" stopOpacity="0.3" />
-            <stop offset="50%" stopColor="#00F0FF" stopOpacity="0.8" />
-            <stop offset="100%" stopColor="#00F0FF" stopOpacity="0.3" />
+            <stop offset="0%" stopColor="#E5560E" stopOpacity="0.3" />
+            <stop offset="50%" stopColor="#E5560E" stopOpacity="0.8" />
+            <stop offset="100%" stopColor="#E5560E" stopOpacity="0.3" />
           </linearGradient>
           <linearGradient id="vesselVert" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stopColor="#00F0FF" stopOpacity="0.6" />
-            <stop offset="50%" stopColor="#00F0FF" stopOpacity="0.9" />
-            <stop offset="100%" stopColor="#00F0FF" stopOpacity="0.4" />
+            <stop offset="0%" stopColor="#E5560E" stopOpacity="0.6" />
+            <stop offset="50%" stopColor="#E5560E" stopOpacity="0.9" />
+            <stop offset="100%" stopColor="#E5560E" stopOpacity="0.4" />
           </linearGradient>
           <filter id="glow">
             <feGaussianBlur stdDeviation="2" result="blur" />
@@ -60,10 +60,10 @@ export default function HeroVisual() {
         {/* Faint grid */}
         <motion.g variants={{ hidden: { opacity: 0 }, visible: { opacity: 1, transition: { duration: 1.5 } } }}>
           {Array.from({ length: 9 }).map((_, i) => (
-            <line key={`vg${i}`} x1={50 + i * 40} y1="20" x2={50 + i * 40} y2="500" stroke="#00F0FF" strokeOpacity="0.03" strokeWidth="0.5" />
+            <line key={`vg${i}`} x1={50 + i * 40} y1="20" x2={50 + i * 40} y2="500" stroke="#E5560E" strokeOpacity="0.03" strokeWidth="0.5" />
           ))}
           {Array.from({ length: 13 }).map((_, i) => (
-            <line key={`hg${i}`} x1="30" y1={20 + i * 40} x2="370" y2={20 + i * 40} stroke="#00F0FF" strokeOpacity="0.03" strokeWidth="0.5" />
+            <line key={`hg${i}`} x1="30" y1={20 + i * 40} x2="370" y2={20 + i * 40} stroke="#E5560E" strokeOpacity="0.03" strokeWidth="0.5" />
           ))}
         </motion.g>
 
@@ -96,7 +96,7 @@ export default function HeroVisual() {
         {/* Inner line of top head */}
         <motion.path
           d="M 138 90 Q 138 58 200 58 Q 262 58 262 90"
-          stroke="#00F0FF"
+          stroke="#E5560E"
           strokeWidth="0.5"
           strokeOpacity="0.3"
           variants={draw}
@@ -114,7 +114,7 @@ export default function HeroVisual() {
         {/* Discharge nozzle */}
         <motion.path
           d="M 185 480 L 185 500 M 215 480 L 215 500 M 185 500 L 215 500"
-          stroke="#00F0FF"
+          stroke="#E5560E"
           strokeWidth="1.2"
           strokeOpacity="0.7"
           variants={draw}
@@ -129,7 +129,7 @@ export default function HeroVisual() {
             cy={y}
             rx="72"
             ry="8"
-            stroke="#00F0FF"
+            stroke="#E5560E"
             strokeWidth="0.8"
             strokeOpacity={0.4 + i * 0.05}
             fill="none"
@@ -146,7 +146,7 @@ export default function HeroVisual() {
             y1="90"
             x2={200 + offset}
             y2="420"
-            stroke="#00F0FF"
+            stroke="#E5560E"
             strokeWidth="0.4"
             strokeOpacity={0.15 + (i === 2 ? 0.1 : 0)}
             strokeDasharray={i === 2 ? 'none' : '4 8'}
@@ -160,7 +160,7 @@ export default function HeroVisual() {
         <motion.g variants={draw} custom={1.5}>
           <motion.path
             d="M 130 200 L 100 200 M 130 215 L 100 215 M 100 195 L 100 220 M 90 195 L 90 220 M 90 195 L 100 195 M 90 220 L 100 220"
-            stroke="#00F0FF"
+            stroke="#E5560E"
             strokeWidth="1"
             strokeOpacity="0.7"
             variants={draw}
@@ -171,7 +171,7 @@ export default function HeroVisual() {
         <motion.g variants={draw} custom={1.7}>
           <motion.path
             d="M 270 300 L 300 300 M 270 315 L 300 315 M 300 295 L 300 320 M 310 295 L 310 320 M 300 295 L 310 295 M 300 320 L 310 320"
-            stroke="#00F0FF"
+            stroke="#E5560E"
             strokeWidth="1"
             strokeOpacity="0.7"
             variants={draw}
@@ -181,7 +181,7 @@ export default function HeroVisual() {
         {/* Top nozzle (center) */}
         <motion.path
           d="M 192 50 L 192 30 M 208 50 L 208 30 M 188 30 L 212 30 M 188 25 L 212 25"
-          stroke="#00F0FF"
+          stroke="#E5560E"
           strokeWidth="1"
           strokeOpacity="0.6"
           variants={draw}
@@ -193,18 +193,18 @@ export default function HeroVisual() {
           variants={{ hidden: { opacity: 0 }, visible: { opacity: 1, transition: { duration: 1, delay: 2.5 } } }}
         >
           {/* Diameter dimension */}
-          <line x1="130" y1="455" x2="270" y2="455" stroke="#00F0FF" strokeWidth="0.5" strokeOpacity="0.4" />
-          <line x1="130" y1="451" x2="130" y2="459" stroke="#00F0FF" strokeWidth="0.5" strokeOpacity="0.4" />
-          <line x1="270" y1="451" x2="270" y2="459" stroke="#00F0FF" strokeWidth="0.5" strokeOpacity="0.4" />
-          <text x="200" y="468" textAnchor="middle" fill="#00F0FF" fillOpacity="0.55" fontSize="9" fontFamily="monospace">
+          <line x1="130" y1="455" x2="270" y2="455" stroke="#E5560E" strokeWidth="0.5" strokeOpacity="0.4" />
+          <line x1="130" y1="451" x2="130" y2="459" stroke="#E5560E" strokeWidth="0.5" strokeOpacity="0.4" />
+          <line x1="270" y1="451" x2="270" y2="459" stroke="#E5560E" strokeWidth="0.5" strokeOpacity="0.4" />
+          <text x="200" y="468" textAnchor="middle" fill="#E5560E" fillOpacity="0.55" fontSize="9" fontFamily="monospace">
             Ø 3200mm
           </text>
 
           {/* Height dimension */}
-          <line x1="30" y1="50" x2="30" y2="500" stroke="#00F0FF" strokeWidth="0.4" strokeOpacity="0.3" />
-          <line x1="26" y1="50" x2="34" y2="50" stroke="#00F0FF" strokeWidth="0.5" strokeOpacity="0.3" />
-          <line x1="26" y1="500" x2="34" y2="500" stroke="#00F0FF" strokeWidth="0.5" strokeOpacity="0.3" />
-          <text x="24" y="280" textAnchor="middle" fill="#00F0FF" fillOpacity="0.45" fontSize="8" fontFamily="monospace" transform="rotate(-90, 24, 280)">
+          <line x1="30" y1="50" x2="30" y2="500" stroke="#E5560E" strokeWidth="0.4" strokeOpacity="0.3" />
+          <line x1="26" y1="50" x2="34" y2="50" stroke="#E5560E" strokeWidth="0.5" strokeOpacity="0.3" />
+          <line x1="26" y1="500" x2="34" y2="500" stroke="#E5560E" strokeWidth="0.5" strokeOpacity="0.3" />
+          <text x="24" y="280" textAnchor="middle" fill="#E5560E" fillOpacity="0.45" fontSize="8" fontFamily="monospace" transform="rotate(-90, 24, 280)">
             12.500mm
           </text>
         </motion.g>
@@ -214,16 +214,16 @@ export default function HeroVisual() {
           variants={{ hidden: { opacity: 0, x: 20 }, visible: { opacity: 1, x: 0, transition: { duration: 1, delay: 2.8 } } }}
         >
           {/* Material */}
-          <line x1="270" y1="150" x2="330" y2="120" stroke="#00F0FF" strokeWidth="0.5" strokeOpacity="0.3" strokeDasharray="2 3" />
-          <circle cx="270" cy="150" r="2" fill="#00F0FF" fillOpacity="0.5" />
-          <text x="335" y="116" fill="#00F0FF" fillOpacity="0.6" fontSize="8" fontFamily="monospace">P355NL1</text>
-          <text x="335" y="128" fill="#00F0FF" fillOpacity="0.35" fontSize="7" fontFamily="monospace">t = 25mm</text>
+          <line x1="270" y1="150" x2="330" y2="120" stroke="#E5560E" strokeWidth="0.5" strokeOpacity="0.3" strokeDasharray="2 3" />
+          <circle cx="270" cy="150" r="2" fill="#E5560E" fillOpacity="0.5" />
+          <text x="335" y="116" fill="#E5560E" fillOpacity="0.6" fontSize="8" fontFamily="monospace">P355NL1</text>
+          <text x="335" y="128" fill="#E5560E" fillOpacity="0.35" fontSize="7" fontFamily="monospace">t = 25mm</text>
 
           {/* Certification */}
-          <line x1="310" y1="307" x2="340" y2="350" stroke="#00F0FF" strokeWidth="0.5" strokeOpacity="0.3" strokeDasharray="2 3" />
-          <circle cx="310" cy="307" r="2" fill="#00F0FF" fillOpacity="0.5" />
-          <text x="345" y="348" fill="#00F0FF" fillOpacity="0.6" fontSize="8" fontFamily="monospace">ISO 3834-2</text>
-          <text x="345" y="360" fill="#00F0FF" fillOpacity="0.35" fontSize="7" fontFamily="monospace">PED 2014/68/EU</text>
+          <line x1="310" y1="307" x2="340" y2="350" stroke="#E5560E" strokeWidth="0.5" strokeOpacity="0.3" strokeDasharray="2 3" />
+          <circle cx="310" cy="307" r="2" fill="#E5560E" fillOpacity="0.5" />
+          <text x="345" y="348" fill="#E5560E" fillOpacity="0.6" fontSize="8" fontFamily="monospace">ISO 3834-2</text>
+          <text x="345" y="360" fill="#E5560E" fillOpacity="0.35" fontSize="7" fontFamily="monospace">PED 2014/68/EU</text>
         </motion.g>
 
         {/* === WELD SEAM INDICATORS === */}
@@ -239,7 +239,7 @@ export default function HeroVisual() {
               cy={y}
               rx="70"
               ry="7"
-              stroke="#00F0FF"
+              stroke="#E5560E"
               strokeWidth="1.5"
               strokeOpacity="0.15"
               strokeDasharray="2 6"
@@ -289,7 +289,7 @@ export default function HeroVisual() {
         </motion.g>
 
         {/* === CORNER BRACKETS === */}
-        <g stroke="#00F0FF" strokeWidth="1" strokeOpacity="0.25">
+        <g stroke="#E5560E" strokeWidth="1" strokeOpacity="0.25">
           <path d="M 50 30 L 50 55 M 50 30 L 75 30" />
           <path d="M 350 30 L 350 55 M 350 30 L 325 30" />
           <path d="M 50 505 L 50 480 M 50 505 L 75 505" />
@@ -302,7 +302,7 @@ export default function HeroVisual() {
           y1="30"
           x2="350"
           y2="30"
-          stroke="#00F0FF"
+          stroke="#E5560E"
           strokeWidth="0.4"
           strokeOpacity="0.2"
           animate={{ y1: [30, 505, 30], y2: [30, 505, 30] }}

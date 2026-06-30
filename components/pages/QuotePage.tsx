@@ -48,7 +48,7 @@ export default function QuotePage() {
                   </label>
                   <input
                     type="text"
-                    className="w-full bg-transparent border-0 border-b border-wireframe-stroke text-on-surface font-body py-3 px-0 focus:outline-none focus:border-blueprint-cyan focus:shadow-[0_1px_0_0_#00F0FF] transition-all placeholder:text-on-tertiary-container"
+                    className="w-full bg-transparent border-0 border-b border-wireframe-stroke text-on-surface font-body py-3 px-0 focus:outline-none focus:border-blueprint-cyan focus:shadow-[0_1px_0_0_#E5560E] transition-all placeholder:text-on-tertiary-container"
                     placeholder="Nome da empresa ou contacto"
                   />
                 </div>
@@ -58,7 +58,7 @@ export default function QuotePage() {
                   </label>
                   <input
                     type="email"
-                    className="w-full bg-transparent border-0 border-b border-wireframe-stroke text-on-surface font-body py-3 px-0 focus:outline-none focus:border-blueprint-cyan focus:shadow-[0_1px_0_0_#00F0FF] transition-all placeholder:text-on-tertiary-container"
+                    className="w-full bg-transparent border-0 border-b border-wireframe-stroke text-on-surface font-body py-3 px-0 focus:outline-none focus:border-blueprint-cyan focus:shadow-[0_1px_0_0_#E5560E] transition-all placeholder:text-on-tertiary-container"
                     placeholder="email@empresa.com"
                   />
                 </div>
@@ -135,7 +135,7 @@ export default function QuotePage() {
                 </label>
                 <textarea
                   rows={5}
-                  className="w-full bg-white/[0.02] border border-wireframe-stroke text-on-surface font-body p-4 focus:outline-none focus:border-blueprint-cyan focus:shadow-[0_0_0_1px_rgba(0,240,255,0.2)] transition-all resize-none placeholder:text-on-tertiary-container"
+                  className="w-full bg-white/[0.02] border border-wireframe-stroke text-on-surface font-body p-4 focus:outline-none focus:border-blueprint-cyan focus:shadow-[0_0_0_1px_rgba(229,86,14,0.2)] transition-all resize-none placeholder:text-on-tertiary-container"
                   placeholder="Descreva o projeto, requisitos especiais, certificações necessárias, acabamentos..."
                 />
               </div>

@@ -50,7 +50,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="md:col-span-4">
             <Link href="/" className="inline-block mb-5">
-              <Image loader={staticLoader} src="/vicometal/assets/vicometal-logo.svg" alt="Vicometal" width={160} height={40} className="brightness-0 invert opacity-90" />
+              <Image loader={staticLoader} src="/vicometal/assets/vicometal_logo_final.png" alt="Grupo Vicometal" width={220} height={56} className="h-[52px] w-auto object-contain invert hue-rotate-180 opacity-90" />
             </Link>
             <p className="font-body text-body-md text-on-surface-variant max-w-sm mb-6">
               Desde 2001 a fornecer soluções de engenharia e metalomecânica para os mais exigentes projetos industriais em 4 continentes.

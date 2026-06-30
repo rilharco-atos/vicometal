@@ -83,11 +83,11 @@ export default function WorldMap() {
             >
               <defs>
                 <radialGradient id="mapGlow" cx="50%" cy="50%" r="50%">
-                  <stop offset="0%" stopColor="rgba(0,240,255,0.06)" />
+                  <stop offset="0%" stopColor="rgba(229,86,14,0.06)" />
                   <stop offset="100%" stopColor="transparent" />
                 </radialGradient>
                 <filter id="pinShadow">
-                  <feDropShadow dx="0" dy="0" stdDeviation="3" floodColor="#00F0FF" floodOpacity="0.4" />
+                  <feDropShadow dx="0" dy="0" stdDeviation="3" floodColor="#E5560E" floodOpacity="0.4" />
                 </filter>
                 <filter id="hqShadow">
                   <feDropShadow dx="0" dy="0" stdDeviation="4" floodColor="#c8963e" floodOpacity="0.5" />
@@ -112,7 +112,7 @@ export default function WorldMap() {
                     key={`arc-${pin.id}`}
                     d={`M${startX},${startY} Q${midX},${midY} ${pin.cx},${pin.cy}`}
                     fill="none"
-                    stroke="rgba(0,240,255,0.08)"
+                    stroke="rgba(229,86,14,0.08)"
                     strokeWidth="1"
                     strokeDasharray="2 4"
                     initial={{ pathLength: 0 }}
@@ -153,7 +153,7 @@ export default function WorldMap() {
                     cx={pin.cx} cy={pin.cy}
                     r={activePin?.id === pin.id ? 10 : 0}
                     fill="none"
-                    stroke={pin.isHQ ? 'rgba(200,150,62,0.3)' : 'rgba(0,240,255,0.2)'}
+                    stroke={pin.isHQ ? 'rgba(200,150,62,0.3)' : 'rgba(229,86,14,0.2)'}
                     strokeWidth="1"
                     className="transition-all duration-300"
                   />
@@ -161,7 +161,7 @@ export default function WorldMap() {
                   <motion.circle
                     cx={pin.cx} cy={pin.cy}
                     r={pin.isHQ ? 4.5 : 3}
-                    fill={pin.isHQ ? '#c8963e' : '#00F0FF'}
+                    fill={pin.isHQ ? '#c8963e' : '#E5560E'}
                     filter={pin.isHQ ? 'url(#hqShadow)' : 'url(#pinShadow)'}
                     initial={{ scale: 0, opacity: 0 }}
                     animate={isInView ? { scale: 1, opacity: 1 } : {}}
@@ -187,12 +187,12 @@ export default function WorldMap() {
                 <div className="bg-[#141920]/95 backdrop-blur-md border border-white/[0.08] px-5 py-4 shadow-2xl rounded-md min-w-[220px]">
                   <div className="flex items-center justify-between mb-2">
                     <div className="flex items-center gap-2">
-                      <span className={`w-2 h-2 rounded-full ${activePin.isHQ ? 'bg-[#c8963e]' : 'bg-[#00F0FF]'}`} />
+                      <span className={`w-2 h-2 rounded-full ${activePin.isHQ ? 'bg-[#c8963e]' : 'bg-[#E5560E]'}`} />
                       <span className="text-[13px] font-medium text-white">{activePin.country}</span>
                     </div>
                     <span className="text-[11px] text-white/40 font-mono">{activePin.year}</span>
                   </div>
-                  <p className="text-[12px] text-[#00F0FF]/90 leading-snug mb-2 font-mono">{activePin.project}</p>
+                  <p className="text-[12px] text-[#E5560E]/90 leading-snug mb-2 font-mono">{activePin.project}</p>
                   <div className="flex items-center justify-between pt-2 border-t border-white/[0.06]">
                     <span className="text-[11px] text-white/50">{activePin.detail}</span>
                     <span className="text-[11px] text-white/70 font-mono font-medium">{activePin.tonnage}</span>
@@ -232,7 +232,7 @@ export default function WorldMap() {
                 <span className="font-mono text-[11px] text-on-surface-variant">Sede</span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="w-2.5 h-2.5 rounded-full bg-[#00F0FF] shadow-[0_0_8px_rgba(0,240,255,0.4)]" />
+                <span className="w-2.5 h-2.5 rounded-full bg-[#E5560E] shadow-[0_0_8px_rgba(229,86,14,0.4)]" />
                 <span className="font-mono text-[11px] text-on-surface-variant">Projetos internacionais</span>
               </div>
             </div>

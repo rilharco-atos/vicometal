@@ -36,7 +36,7 @@ export default function Header() {
     >
       <div className="flex justify-between items-center px-6 md:px-margin max-w-[1440px] mx-auto">
         <Link href="/" className="flex items-center gap-3 group">
-          <Image loader={staticLoader} src="/vicometal/assets/vicometal-logo.svg" alt="Vicometal" width={140} height={36} className="brightness-0 invert opacity-90 group-hover:opacity-100 transition-opacity" />
+          <Image loader={staticLoader} src="/vicometal/assets/vicometal_logo_final.png" alt="Grupo Vicometal" width={200} height={48} className="h-[46px] w-auto object-contain invert hue-rotate-180 opacity-90 group-hover:opacity-100 transition-opacity duration-300" />
         </Link>
 
         <nav className="hidden lg:flex items-center gap-8">

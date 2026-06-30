@@ -269,7 +269,7 @@ export default function AiChat() {
           setIsOpen(!isOpen)
           setShowBadge(false)
         }}
-        className="w-14 h-14 rounded-full bg-blueprint-cyan text-[#0d0f10] flex items-center justify-center shadow-[0_8px_24px_rgba(0,240,255,0.3)] hover:scale-110 hover:shadow-[0_12px_32px_rgba(0,240,255,0.4)] transition-all relative"
+        className="w-14 h-14 rounded-full bg-blueprint-cyan text-[#0d0f10] flex items-center justify-center shadow-[0_8px_24px_rgba(229,86,14,0.3)] hover:scale-110 hover:shadow-[0_12px_32px_rgba(229,86,14,0.4)] transition-all relative"
         aria-label="Assistente Virtual"
       >
         {!isOpen ? (

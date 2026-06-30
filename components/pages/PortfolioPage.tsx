@@ -12,31 +12,31 @@ const projects = [
     title: 'Evaporador Quench',
     category: 'Caldeiraria',
     description: '26 toneladas — Espanha, 2024. Caldeiraria pesada para indústria de celulose.',
-    image: '/uploads/destaques/evaporador-quench.jpg',
+    image: '/vicometal/uploads/destaques/evaporador-quench.jpg',
   },
   {
     title: 'Central de Asfalto',
     category: 'Estruturas',
     description: '120 toneladas — França, 2024. Estrutura metálica completa e montagem on-site.',
-    image: '/uploads/destaques/central-asfalto.jpg',
+    image: '/vicometal/uploads/destaques/central-asfalto.jpg',
   },
   {
     title: 'Ciclone Industrial',
     category: 'Caldeiraria',
     description: '85 toneladas — Alemanha, 2023. Equipamento para indústria cimenteira.',
-    image: '/uploads/destaques/ciclone-alemanha.jpg',
+    image: '/vicometal/uploads/destaques/ciclone-alemanha.jpg',
   },
   {
     title: 'Soldadura Robotizada MIG/MAG',
     category: 'Soldadura',
     description: 'Portugal, 2024. Processos automatizados com robots de soldadura de última geração.',
-    image: '/uploads/destaques/soldadura-mig-mag.jpg',
+    image: '/vicometal/uploads/destaques/soldadura-mig-mag.jpg',
   },
   {
     title: 'Transportadores em Galeria',
     category: 'Transporte',
     description: '200 metros — Portugal, 2023. Fabrico e montagem de sistema de transporte completo.',
-    image: '/uploads/destaques/transportadores-galeria.jpg',
+    image: '/vicometal/uploads/destaques/transportadores-galeria.jpg',
   },
 ]
 
